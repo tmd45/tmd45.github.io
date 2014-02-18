@@ -1,3 +1,5 @@
-# The website for tmd45.jp (sandbox)
+# The website for tmd45.github.io
 
-http://tmd45.jp
+[![Build Status](https://travis-ci.org/tmd45/tmd45.github.io.png?branch=source)](https://travis-ci.org/tmd45/tmd45.github.io)
+
+http://tmd45.github.io/
