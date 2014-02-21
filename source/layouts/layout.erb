@@ -8,11 +8,11 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>tmd45.github.io sandbox</title>
+    <title><%= current_page.data.title || "tmd45.github.io" %></title>
 
     <!-- Custom styles for this template -->
-    <link href="/css/all-f506ca7b.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="/js/all-da39a3ee.js" type="text/javascript"></script>
+    <%= stylesheet_link_tag "all" %>
+    <%= javascript_include_tag  "all" %>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,12 +41,7 @@
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">tmd45.github.io</h1>
-<p class="lead">Middleman で簡単なページを作成してみました。bootstrap-sass を利用して Twitter Bootstrap も使用しています。</p>
-<p class="lead">
-  <a href="http://middlemanapp.com/jp/" class="btn btn-lg btn-default">meets Middleman</a>
-</p>
-
+            <%= yield %>
           </div>
 
           <div class="mastfoot">
