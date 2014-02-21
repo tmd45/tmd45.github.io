@@ -1,27 +1,4 @@
 ---
-language: ruby
-script: bundle exec middleman build
 branches:
   only:
     - source
-
-env:
-  global:
-    - GIT_COMMITTER_NAME=travis
-    - GIT_COMMITTER_EMAIL=tmd45@otegami.jpn.org
-    - GIT_AUTHOR_NAME=tmd45
-    - GIT_AUTHOR_EMAIL=tmd45@otegami.jpn.org
-    - secure: B91gIcyFW7v+ySIQpJTsy33k+bX17DbRhuXduK4IFm28yYg1m6dU6L0l/jGyAmzDd6FWfRIjSKnCv9E0n2nx3i9caLlpo7uERCTQrKXCphggea0Af1ScZpkU2AMnOr+7dDDFtkHJIg/dPmxxRW5uYgLb0FyJRvzV8o4pz/zJMPw=
-
-before_script:
-  - git clone --quiet http://github.com/tmd45/tmd45.github.io.git build
-  - pushd build
-  - git checkout
-  - popd
-
-after_success:
-  - cd build
-  - echo -e "---\nbranches:\n  only:\n    - source" > .travis.yml
-  - git add -A
-  - git commit -m 'Update'
-  - '[ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/tmd45/tmd45.github.io.git 2> /dev/null'
