@@ -32,6 +32,13 @@
 # Helpers
 ###
 
+activate :sprockets
+
+after_configuration do
+#  sprockets.append_path "#{root}/vendor/assets/fontello/stylesheet/"
+  sprockets.append_path "#{root}/vendor/assets"
+end
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
