@@ -35,8 +35,11 @@
 activate :sprockets
 
 after_configuration do
-#  sprockets.append_path "#{root}/vendor/assets/fontello/stylesheet/"
   sprockets.append_path "#{root}/vendor/assets"
+
+  sprockets.import_asset 'fontello_normal-ie7.css'
+  sprockets.import_asset 'waypoints.js'
+  sprockets.import_asset 'waypoints-sticky.js'
 end
 
 # Automatic image dimensions on image_tag helper

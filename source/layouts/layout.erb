@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title><%= current_page.data.title || "tmd45.github.io" %></title>
+  <title><%= current_page.data.title || "tmd45.github.io" %></title>
 
-    <!-- Custom styles for this template -->
-    <%= stylesheet_link_tag "all" %>
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag "normalize", "all" %>
 
-    <!-- [if IE 7]>
-      <%= stylesheet_link_tag "fontello_normal-ie7" %>
-    <![endif]-->
+  <!-- [if IE 7]>
+    <%= stylesheet_link_tag "fontello_normal-ie7" %>
+  <![endif]-->
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
 
-  <body>
+<body style="background-color:#f8f8f8;">
 
-    <div class="site-wrapper">
+  <%= yield %>
 
-      <div class="site-wrapper-inner">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <!--
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/docs.min.js"></script>
+  -->
+  <%= javascript_include_tag  "waypoints", "waypoints-sticky", "all" %>
+  <script>
+    $(document).ready(function() {
+      var heroImage = $('header .hero-image');
+      if(heroImage.length > 0) {
+        $(window).scroll(function() {
+          var $this = $(this);
+          var top = $this.scrollTop();
+          heroImage.css('transform', 'translateY(' + (top/2) + 'px)');
+        });
+      }
+    });
+    $(window).load(function() {
+      // Hero image + navbar
+      var $navbar = $('.navbar-inner');
+      $navbar.waypoint('sticky', {
+        wrapper: '<span class="sticky-wrapper" />',
+        stuckClass: 'navbar-fixed-top',
+        direction: 'down right',
+        target: '.navbar'
+      });
 
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <%= yield %>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!--
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    -->
-    <%= javascript_include_tag  "all" %>
-  </body>
+//      $navbar.parent().waypoint('sticky', { stuckClass: 'navbar-fixed-bottom', offset: 'bottom-in-view', direction: 'up', target: '.home' });
+//      if($navbar.is(':below-the-fold')) $navbar.toggleClass('navbar-fixed-bottom', true); 
+    });
+  </script>
+</body>
 </html>

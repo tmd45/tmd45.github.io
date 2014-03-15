@@ -7,3 +7,64 @@
 @import "highlight"
 @import "fontello_normal"
 
+/* variables */
+// color
+$white: #f8f8f8
+$pink: #ff00cc
+
+$base: #785F78
+
+// size
+$navbar-margin: 17px
+$content-mergin: 68px
+
+/* original tips ------------------------------*/
+.full-width
+  width: 100%
+
+/* original -----------------------------------*/
+* 
+  font: 14px/1.231 'Helvetica','Arial','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+
+/* navbar */
+.navbar-stick
+  position: relative
+  height: 52px + ($navbar-margin * 2)
+  padding: 0
+  background-color: $base
+
+.navbar-inner
+  background-color: $white
+  +zurui-box-outer
+  +zurui-ts-000(.1)
+  .home
+    margin: $navbar-margin 0
+    .navbar-collapse
+      padding-left: 0
+      padding-right: 0
+
+.navbar-header
+  h1
+    padding: 0
+    margin: 0
+    .navbar-brand
+      font-size: 26px
+      color: $pink
+      +zurui-ts-fff
+
+/* content */
+.home-content
+  position: relative
+  z-index: 10
+  background-color: $white
+  +zurui-ts-fff(.3)
+  .home-page
+    .container
+      margin: $content-mergin auto
+    img
+      position: relative
+  .darken
+    +zurui-gradient-top-darken($base)
+    color: $white
+    +zurui-ts-fff(.1)
+
