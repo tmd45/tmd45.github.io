@@ -9,10 +9,14 @@
 
 /* variables */
 // color
+$black: #676067
 $white: #f8f8f8
+$color-diff: #050905
+$black-hover: $black - $color-diff
+$white-hover: $white - $color-diff
 $pink: #ff00cc
 
-$base: #785F78
+$base: #BAA6B9
 
 // size
 $navbar-margin: 17px
@@ -22,9 +26,24 @@ $content-mergin: 68px
 .full-width
   width: 100%
 
+.img-center
+  mergin: 0 auto
+
 /* original -----------------------------------*/
 * 
   font: 14px/1.231 'Helvetica','Arial','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+
+a
+  color: $black
+  &:hover
+    color: $black-hover
+    +zurui-ts-000(.1)
+
+a.link-light
+  color: $white
+  &:hover
+    color: $white-hover
+    +zurui-ts-fff(.1)
 
 /* navbar */
 .navbar-stick
@@ -63,8 +82,18 @@ $content-mergin: 68px
       margin: $content-mergin auto
     img
       position: relative
-  .darken
-    +zurui-gradient-top-darken($base)
+  .dark
+    background-color: $base + #334433
+  .base
+    +zurui-gradient-top-lighten($base)
     color: $white
-    +zurui-ts-fff(.1)
+    +zurui-ts-000(.1)
+
+.social-link
+  margin-top: 1.9em
+  i
+    font-size: 300%
+  [class^="icon-"]:before,
+  [class*="icon-"]:before
+    margin-left: 0
 
