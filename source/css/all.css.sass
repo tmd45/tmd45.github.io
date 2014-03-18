@@ -20,6 +20,7 @@ $base: #BAA6B9
 
 // size
 $navbar-margin: 17px
+$navbar-height: 52px + ($navbar-margin * 2)
 $content-mergin: 68px
 
 /* original tips ------------------------------*/
@@ -27,7 +28,17 @@ $content-mergin: 68px
   width: 100%
 
 .img-center
-  mergin: 0 auto
+  position: relative
+  width: 100%
+  mergin: auto auto
+  padding: 0
+
+dl
+  dt
+    padding-left: 1.0em
+  dd
+    padding-left: 1.7em
+    margin-bottom: 0.3em
 
 /* original -----------------------------------*/
 * 
@@ -48,7 +59,7 @@ a.link-light
 /* navbar */
 .navbar-stick
   position: relative
-  height: 52px + ($navbar-margin * 2)
+  height: $navbar-height
   padding: 0
   background-color: $base
 
@@ -80,6 +91,10 @@ a.link-light
   .home-page
     .container
       margin: $content-mergin auto
+      .row
+        position: relative
+        padding-top: $navbar-height
+        margin-top: (-$navbar-height)
     img
       position: relative
   .dark
