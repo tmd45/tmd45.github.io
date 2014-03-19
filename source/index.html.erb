@@ -33,7 +33,7 @@ title: tmd45.github.io
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#page-profile">Profile</a></li>
               <li><a href="#page-activity">Activity</a></li>
-              <li><a href="#page-itentifications">Itentifications</a></li>
+              <li><a href="#page-itentification">Itentification</a></li>
             </ul>
           </div>
 
@@ -46,17 +46,17 @@ title: tmd45.github.io
 
 <div class="home-content">
   <div class="container-fluid home-page base" id="page-profile">
-    <div class="container">
+    <div class="container content-inner">
       <div class="row">
 
         <div class="col-sm-4">
-          <img data-src="../images/tmd45_icon.jpg" src="../images/tmd45_icon.jpg" class="img-responsive img-circle" />
+          <img data-src="../images/tmd45_icon.jpg" src="../images/tmd45_icon.jpg" class="img-responsive img-circle img-center" />
         </div>
         <div class="col-sm-8">
-          <h1 class="cover-heading">Yoko TAMADA, @tmd45</h1>
+          <h1 class="cover-heading">Yoko TAMADA, <i class="icon-atmark"></i>tmd45</h1>
           <p class="lead">I'm a web engineer in Tokyo, Japan.</p>
           <p>Interested in web development, user experience, and design.</p>
-          <p>I ♡ so many more interesting things.</p>
+          <p>I <i class="icon-heart-empty"></i>so many more interesting things.</p>
           <p class="social-link">
           <a href="https://github.com/tmd45" class="link-light" title="github" target="_blank"><i class="icon-github"></i></a>
           <a href="https://twitter.com/tmd45" class="link-light" title="twitter" target="_blank"><i class="icon-twitter"></i></a>
@@ -76,22 +76,23 @@ title: tmd45.github.io
   </div>
 
   <div class="container-fluid home-page">
-    <div class="container">
+    <div class="container content-inner">
       <div class="row">
 
+        <h2>Profile</h2>
         <div class="col-sm-7">
           <h4>Skills</h4>
           <dl>
             <dt>Programming Language</dt>
             <dd>Ruby, Java, and a little JavaScript, PHP.</dd>
             <dt>Frameworks</dt>
-            <dd>Ruby on Rails. Struts1.x<span class="supersmall gray">(my god!)</span>, Spring, Hibernate in Java. FuelPHP in PHP.</dd>
+            <dd>Ruby on Rails. Struts1.x<small class="text-muted">(my god!)</small>, Spring, Hibernate in Java. FuelPHP in PHP.</dd>
             <dt>Markup Language</dt>
             <dd>HTML + CSS, Sass, Markdown, and Hatena Syntax.</dd>
             <dt>Systems</dt>
-            <dd>Windows, Solaris, OS X, and Cent OS.</dd>
+            <dd>OS X, Solaris, and Cent OS.</dd>
             <dt>Tools</dt>
-            <dd>Vim, Eclipse, and Subversion, git.</dd>
+            <dd>Vim, Eclipse, and Git, <i class="icon-heart-empty"></i>Github</dd>
           </dl>
         </div>
         <div class="col-sm-5">
@@ -105,21 +106,270 @@ title: tmd45.github.io
   </div>
 
   <div class="container-fluid home-page dark" id="page-activity">
-    <div class="container">
-      <div class="row">
+    <div id="activity-carousel" class="carousel carousel-fade slide" data-ride="carousel">
 
-        <h2>Activity</h2>
-        <p>　吾輩（わがはい）は猫である。名前はまだ無い。　どこで生れたかとんと見当（けんとう）がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪（どうあく）な種族であったそうだ。この書生というのは時々我々を捕（つかま）えて煮（に）て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌（てのひら）に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始（みはじめ）であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶（やかん）だ。その後（ご）猫にもだいぶ逢（あ）ったがこんな片輪（かたわ）には一度も出会（でく）わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙（けむり）を吹く。どうも咽（む）せぽくて実に弱った。これが人間の飲む煙草（たばこ）というものである事はようやくこの頃知った。</p>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#activity-carousel" data-slide-to="0" class="active" title="2014"></li>
+        <li data-target="#activity-carousel" data-slide-to="1" title="2013"></li>
+        <li data-target="#activity-carousel" data-slide-to="2" title="2012"></li>
+        <li data-target="#activity-carousel" data-slide-to="3" title="2011"></li>
+        <li data-target="#activity-carousel" data-slide-to="4" title="2010"></li>
+        <li data-target="#activity-carousel" data-slide-to="5" title="2009"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <div class="container content-inner">
+            <div class="row">
+              <div class="col-md-12 html-item">
+                <h2>Activity <small>2014</small></h2>
+                <div class="col-md-6">
+                  <dl>
+                    <dt><%= Time.local(2014,4,19).strftime('%F %a.') %> <span class="label label-info">todo</span></dt>
+                    <dd><a href="http://regional.rubykaigi.org/oedo04/">大江戸Ruby会議04</a></dd>
+                    <dt><%= Time.local(2014,3,29).strftime('%F %a.') %> <span class="label label-info">todo</span></dt>
+                    <dd><a href="http://regional.rubykaigi.org/tokyu07">TokyuRuby会議07</a></dd>
+                    <dt><%= Time.local(2014,3,22).strftime('%F %a.') %> <span class="label label-info">todo</span></dt>
+                    <dd><a href="http://kosenconf.doorkeeper.jp/events/7837">高専カンファレンス in 東京 2014</a></dd>
+                  </dl>
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container content-inner">
+            <div class="row">
+              <div class="col-md-12 html-item">
+                <h2>Activity <small>2013</small></h2>
+                <div class="col-md-6">
+                  <dl>
+                    <dt><%= Time.local(2013,8,1).strftime('%F %a.') %> <span class="label label-primary">change!</span></dt>
+                    <dd>join <a href="http://www.feedforce.jp/">feedforce Inc.</a></dd>
+                    <dt><%= Time.local(2013,6,15).strftime('%F %a.') %></dt>
+                    <dd><a href="http://kosenconf.github.io/5th-anniversary/">高専カンファレンス 5 周年記念パーティ</a></dd>
+                  </dl>
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container content-inner">
+            <div class="row">
+              <div class="col-md-12 html-item">
+                <h2>Activity <small>2012</small></h2>
+                <div class="col-md-6">
+                  <dl>
+                    <dt>2012-09-23 Sun.</dt>
+                    <dd><a href="http://atnd.org/events/31017">FuelPHP 勉強会 東京 vol.2</a></dd>
+                    <dt>2012-09-15 Sat.</dt>
+                    <dd><a href="http://phpcon.php.gr.jp/w/2012/">PHP カンファレンス 2012</a></dd>
+                    <dt>2012-09-07 Fri. ~ 2012-09-08 Sat.</dt>
+                    <dd><a href="http://www.ospn.jp/osc2012-fall/">オープンソースカンファレンス20120 Tokyo/Fall（2日目 13:00～参加）</a></dd>
+                    <dt>2012-08-04 Sat.</dt>
+                    <dd><a href="http://ll.jus.or.jp/2012/">Lightweight Language Decade</a></dd>
+                    <dt>2012-07-08 Sun.</dt>
+                    <dd><a href="http://atnd.org/event/fuelphp/0">FuelPHP勉強会 東京</a></dd>
+                  </dl>
+                </div>
+                <div class="col-md-6">
+                  <dl class="event-host">
+                    <dt>2012-02-25 Sat.</dt>
+                    <dd><a href="http://atnd.org/events/24986">東京ついモフ★猫カフェ読書会～2012云々</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container content-inner">
+            <div class="row">
+              <div class="col-md-12 html-item">
+                <h2>Activity <small>2011</small></h2>
+                <div class="col-md-6">
+                  <dl>
+                    <dt>2011-09-17</dt>
+                    <dd><a href="http://tcc.nifty.com/cs/catalog/tcc_schedule/catalog_110816203681_1.htm">ITコミュニティ夏祭り</a></dd>
+
+                    <dt>2011-07-30</dt>
+                    <dd><a href="http://tcc.nifty.com/cs/catalog/tcc_schedule/catalog_091202202710_1.htm">駄目な文房具ナイトEX</a></dd>
+                    <dt>2011-07-16</dt>
+                    <dd><a href="http://kosenconf.jp/?034nagano">高専カンファレンス in 長野2</a></dd>
+
+                    <dt>2011-06-25</dt>
+                    <dd><a href="http://kosenconf.jp/?030joshi-tokyo">高専女子カンファレンス2</a></dd>
+                    <dt>2011-06-16</dt>
+                    <dd><a href="http://atnd.org/events/16018">ACT in agile</a></dd>
+
+                    <dt>2011-05-14</dt>
+                    <dd><a href="http://coolnotify.com/cicon">CodeIgniter東京勉強会</a></dd>
+
+                    <dt>2011-04-23</dt>
+                    <dd><a href="http://atnd.org/events/14587">飲んで応援！東北〜関東の酒もってこーい！</a></dd>
+                    <dt>2011-04-23</dt>
+                    <dd><a href="http://kokucheese.com/event/index/9778/">DevLOVE 今、未来に繋がるために帆を立てるとき。</a></dd>
+                    <dt>2011-04-17</dt>
+                    <dd>高専g86会；花見＆東北のおいしいもの！</dd>
+                    <dt>2011-04-16</dt>
+                    <dd><a href="http://fly8.jp/catanplaylive/">カタンで遊ぼう！</a></dd>
+                    <dt>2011-04-09</dt>
+                    <dd><a href="http://kokucheese.com/event/index/9530/">DevLOVE Beautiful Development</a></dd>
+                  </dl>
+                </div>
+                <div class="col-md-6">
+                  <dl>
+                    <dt>2011-03-21</dt>
+                    <dd><a href="https://www.asial.co.jp/school/course_detail/19">(再)PHP技術者認定試験対策講座＋試験</a></dd>
+                    <dt>2011-03-19</dt>
+                    <dd><a href="http://atnd.org/events/13923">再企画！なんで屋さんから出前を取ってHiddenLoungeさんでいただく会</a></dd>
+                    <dt>2011-03-11 <span class="label label-primary">3.11</span></dt>
+                    <dd><a href="https://www.asial.co.jp/school/course_detail/19">PHP技術者認定試験対策講座＋試験</a></dd>
+
+                    <dt>2011-02-26</dt>
+                    <dd><a href="http://tcc.nifty.com/cs/catalog/tcc_schedule/catalog_110112203353_1.htm">駄目な文房具ナイト４</a></dd>
+                    <dt>2011-02-12</dt>
+                    <dd><a href="http://kosenconf.jp/?020salesio">高専カンファレンス in サレジオ2</a></dd>
+                    <dt>2011-02-11</dt>
+                    <dd><a href="http://www.belgaube.jp/page/bosteels">デリリウムカフェ・ベルオーブ全店 ボステールス・キャンペーン 便乗飲み会</a></dd>
+
+                    <dt>2011-01-29</dt>
+                    <dd><a href="http://atnd.org/events/12113">六本木お好み焼き「はてな」で新年会</a></dd>
+                    <dt>2011-01-09</dt>
+                    <dd><a href="http://atnd.org/events/11157">2011年高専クラスタ新年会</a></dd>
+                  </dl>
+                  <dl class="event-host">
+                    <dt>2011-04-30</dt>
+                    <dd><a href="http://atnd.org/events/12602">東京ついモフ★猫カフェ読書会～2011春暖の候</a></dd>
+                    <dt>2011-01-15</dt>
+                    <dd><a href="http://atnd.org/events/10908">東京ついモフ★猫カフェ読書会～2011新春</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container content-inner">
+            <div class="row">
+              <div class="col-md-12 html-item">
+                <h2>Activity <small>2010</small></h2>
+                <div class="col-md-6">
+                  <dl>
+                    <dt>2010-12-25</dt>
+                    <dd><a href="http://atnd.org/events/10474">クリスマスに六本木にある大阪の飛び地でお好み焼きを堪能する会</a></dd>
+                    <dt>2010-12-21</dt>
+                    <dd><a href="http://atnd.org/events/10093">PHP 『 超 』 初心者勉強会 基礎編</a></dd>
+
+                    <dt>2010-10-02</dt>
+                    <dd><a href="http://kosenconf.jp/?014tokyo">高専カンファレンス 2010秋 in 東京</a></dd>
+
+                    <dt>2010-09-06</dt>
+                    <dd><a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Helios_2010/Tokyo">Eclipse DemoCamp Helios 2010 Tokyo</a></dd>
+
+                    <dt>2010-07-31</dt>
+                    <dd><a href="http://ll.jus.or.jp/2010/">Lightweight Language Tiger</a></dd>
+
+                    <dt>2010-06-19</dt>
+                    <dd><a href="http://tweetvite.com/event/dcreserve">パクチーハウス東京＠デリリウムカフェ レゼルブ</a></dd>
+
+                    <dt>2010-05-22 ~ 2010-06-22</dt>
+                    <dd><a href="http://blog.belgaube.com/?eid=957698">DeliriumCafe Meets Poken "Tweet Rally"</a></dd>
+                    <dt>2010-05-22</dt>
+                    <dd><a href="http://blog.belgaube.com/?eid=963779">Poken Meets UP with Huyghe Brewery!!!! @DC TOKYO</a></dd>
+                    <dt>2010-05-15</dt>
+                    <dd><a href="http://atnd.org/events/4500">Poken餃子部定例会 2010/05/15</a></dd>
+                    <dt>2010-05-15</dt>
+                    <dd><a href="http://www.designfesta.com/">デザイン・フェスタ vol.31</a></dd>
+                  </dl>
+                </div>
+                <div class="col-md-6">
+                  <dl>
+                    <dt>2010-03-28</dt>
+                    <dd><a href="http://atnd.org/events/3299">お好み焼き＆たこ焼き Bar ふるふる 2010年3月の会</a></dd>
+                    <dt>2010-03-13</dt>
+                    <dd><a href="http://atnd.org/events/3400">たこ焼きBarふるふる（こじんまりバージョン）</a></dd>
+                    <dt>2010-03-12</dt>
+                    <dd><a href="http://tweetvite.com/event/sweets_n_poken">Sweet Treats Night for Sweets' Lovers &amp; #POKEN Friends</a></dd>
+                    <dt>2010-03-07</dt>
+                    <dd><a href="http://atnd.org/events/3064">Poken Meet Up in Nagoya #pmun</a></dd>
+                    <dt>2010-03-06</dt>
+                    <dd><a href="http://atnd.org/events/2931">fujimotta&amp;fujimonao祝宴会</a></dd>
+
+                    <dt>2010-02-20</dt>
+                    <dd><a href="http://twtvite.com/2c6hl2">Twitter京王沿線deオフ#keioff</a></dd>
+                    <dt>2010-02-13</dt>
+                    <dd><a href="http://atnd.org/events/2893">人見知りのための餃子ツイノミ</a></dd>
+                    <dt>2010-02-09</dt>
+                    <dd><a href="http://poken.jp/ja/news/poken%e7%89%b9%e5%85%b8%ef%bc%88%e3%83%87%e3%83%aa%e3%83%aa%e3%82%a6%e3%83%a0%e3%82%ab%e3%83%95%e3%82%a7%e3%83%88%e3%83%bc%e3%82%ad%e3%83%a7%e3%83%bc%ef%bc%89%e3%81%a82%e6%9c%88%e3%81%aeofficial-meet/">Poken Official Meet Up＠デリリウムカフェトーキョー</a></dd>
+
+                    <dt>2010-01-21</dt>
+                    <dd><a href="http://atnd.org/events/2783">SocialWeb2.0Partyニューイヤー・スペシャルセッション2WeekNight－第1夜－</a></dd>
+                  </dl>
+                  <dl class="event-host">
+                    <dt>2010/07/24</dt>
+                    <dd><a href="http://atnd.org/events/6008">東京ついモフ★猫カフェ読書会</a></dd>
+                    <dt>2010/04/17</dt>
+                    <dd><a href="http://atnd.org/events/3337">東京つい飲み★2010春～華が無くとも酒は美味い！</a></dd>
+                    <dt>2010/01/09</dt>
+                    <dd><a href="http://atnd.org/events/2619">東京つい飲み★2010新年会</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container content-inner">
+            <div class="row">
+              <div class="col-md-12 html-item">
+                <h2>Activity <small>2009</small></h2>
+                <div class="col-md-6">
+                  <dl>
+                    <dt>2009-11-28</dt>
+                    <dd><a href="http://atnd.org/events/2187">Poken餃子部定例会200911</a></dd>
+                    <dt>2009-10-17</dt>
+                    <dd><a href="http://atnd.org/events/1804">Pokenエバンジェリストと行く　新橋餃子の旅</a></dd>
+                    <dt>2009-10-17</dt>
+                    <dd><a href="http://www.jam-anime.jp/">ジャパン・アニメコラボ・マーケット2009</a></dd>
+                  </dl>
+                </div>
+                <div class="col-md-6">
+                  <dl class="event-host">
+                    <dt>2009-09-22</dt>
+                    <dd><a href="http://kokucheese.com/event/index/444/">東京#twinomi ツイッター飲み会 in 新宿</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control hidden-xs" href="#activity-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control hidden-xs" href="#activity-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+
     </div>
   </div>
 
-  <div class="container-fluid home-page" id="page-itentifications">
-    <div class="container">
+  <div class="container-fluid home-page" id="page-itentification">
+    <div class="container content-inner">
       <div class="row">
 
         <h2>Itentifications</h2>
+        <p><% lorem.sentences 5 %></p>
         <p style="height:600px;">　吾輩（わがはい）は猫である。名前はまだ無い。　どこで生れたかとんと見当（けんとう）がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪（どうあく）な種族であったそうだ。この書生というのは時々我々を捕（つかま）えて煮（に）て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌（てのひら）に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始（みはじめ）であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶（やかん）だ。その後（ご）猫にもだいぶ逢（あ）ったがこんな片輪（かたわ）には一度も出会（でく）わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙（けむり）を吹く。どうも咽（む）せぽくて実に弱った。これが人間の飲む煙草（たばこ）というものである事はようやくこの頃知った。</p>
 
       </div>

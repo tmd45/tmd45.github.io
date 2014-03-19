@@ -9,7 +9,7 @@
 
 /* variables */
 // color
-$black: #676067
+$black: #766087
 $white: #f8f8f8
 $color-diff: #050905
 $black-hover: $black - $color-diff
@@ -29,9 +29,8 @@ $content-mergin: 68px
 
 .img-center
   position: relative
-  width: 100%
-  mergin: auto auto
-  padding: 0
+  mergin: 0
+  padding: 0 5%
 
 dl
   dt
@@ -42,13 +41,13 @@ dl
 
 /* original -----------------------------------*/
 * 
-  font: 14px/1.231 'Helvetica','Arial','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+  font: 'Helvetica','Arial','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
 
 a
   color: $black
+  +zurui-ts-000(.1)
   &:hover
     color: $black-hover
-    +zurui-ts-000(.1)
 
 a.link-light
   color: $white
@@ -82,6 +81,11 @@ a.link-light
       color: $pink
       +zurui-ts-fff
 
+.navbar-toggle
+  border-color: $black
+  .icon-bar
+    background-color: $black
+
 /* content */
 .home-content
   position: relative
@@ -89,7 +93,7 @@ a.link-light
   background-color: $white
   +zurui-ts-fff(.3)
   .home-page
-    .container
+    .content-inner
       margin: $content-mergin auto
       .row
         position: relative
@@ -111,4 +115,25 @@ a.link-light
   [class^="icon-"]:before,
   [class*="icon-"]:before
     margin-left: 0
+
+/* carousel */
+.carousel
+  .html-item
+    padding: 0
+    margin: 0
+    min-height: 12em * 2
+
+.carousel-control
+  +zurui-ts-000(.1)
+  opacity: 0.7
+  width: 10%
+.carousel-control.left
+  background-image: none
+.carousel-control.right
+  background-image: none
+
+.event-host
+  color: #999
+  a
+    color: $black + #333
 
