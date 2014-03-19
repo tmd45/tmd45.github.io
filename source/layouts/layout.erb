@@ -24,38 +24,11 @@
   <![endif]-->
 </head>
 
-<body style="background-color:#f8f8f8;">
+<body>
 
   <%= yield %>
 
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
-  <script src="../../assets/js/docs.min.js"></script>
   <%= javascript_include_tag  "waypoints", "waypoints-sticky", "all" %>
-  <script>
-    $(document).ready(function() {
-      var heroImage = $('header .hero-image');
-      if(heroImage.length > 0) {
-        $(window).scroll(function() {
-          var $this = $(this);
-          var top = $this.scrollTop();
-          heroImage.css('transform', 'translateY(' + (top/2) + 'px)');
-        });
-      }
-    });
-    $(window).load(function() {
-      // Hero image + navbar
-      var $navbar = $('.navbar-inner');
-      $navbar.waypoint('sticky', {
-        wrapper: '<span class="sticky-wrapper" />',
-        stuckClass: 'navbar-fixed-top',
-        direction: 'down right',
-        target: '.navbar'
-      });
-
-//      $navbar.parent().waypoint('sticky', { stuckClass: 'navbar-fixed-bottom', offset: 'bottom-in-view', direction: 'up', target: '.home' });
-//      if($navbar.is(':below-the-fold')) $navbar.toggleClass('navbar-fixed-bottom', true); 
-    });
-  </script>
 </body>
 </html>
