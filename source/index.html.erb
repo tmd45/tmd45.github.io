@@ -357,7 +357,7 @@ title: tmd45.github.io
       <a class="left carousel-control hidden-xs" href="#activity-carousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
-      <a class="right carousel-control hidden-xs" href="#activity-carousel" data-slide="next">
+      <a class="right carousel-control" href="#activity-carousel" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
 
@@ -368,8 +368,35 @@ title: tmd45.github.io
     <div class="container content-inner">
       <div class="row">
 
-        <h2>Itentifications</h2>
-        <p style="height:300px;"><%= lorem.sentences 10 %></p>
+        <h2>Itentification</h2>
+
+        <div class="col-xs-3">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills nav-stacked" id="tab-itentification">
+            <li class="active"><a href="#tab-it-social" data-toggle="tab">Social</a></li>
+            <li><a href="#tab-it-dev" data-toggle="tab">Develop, Learn</a></li>
+            <li><a href="#tab-it-useful" data-toggle="tab">Useful</a></li>
+            <li><a href="#tab-it-bookmark" data-toggle="tab">Bookmark, Favorate</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-9">
+          <!-- Tab panes -->
+          <div class="tab-content" id="tab-itentification-content">
+            <div class="tab-pane fade in active" id="tab-it-social">
+              <p><%= lorem.sentences 10 %></p>
+            </div>
+            <div class="tab-pane" id="tab-it-dev">
+              <p><%= lorem.sentences 5 %></p>
+            </div>
+            <div class="tab-pane" id="tab-it-useful">
+              <p><%= lorem.sentences 10 %></p>
+            </div>
+            <div class="tab-pane" id="tab-it-bookmark">
+              <p><%= lorem.sentences 5 %></p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>

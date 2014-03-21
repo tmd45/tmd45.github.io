@@ -115,6 +115,7 @@ a.link-light
   [class^="icon-"]:before,
   [class*="icon-"]:before
     margin-left: 0
+    margin-right: 0.1em
 
 /* carousel */
 .carousel
@@ -136,4 +137,17 @@ a.link-light
   color: #999
   a
     color: $black + #333
+
+/* tab */
+.nav-pills
+  li.active
+    a
+      background-color: $base
+    a:focus
+      background-color: $base
+    a:hover
+      background-color: $base
+.tab-content
+  .tab-pane
+    min-height: 10em * 2
 
