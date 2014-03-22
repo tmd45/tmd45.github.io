@@ -97,8 +97,6 @@ a.link-light
       margin: $content-mergin auto
       .row
         position: relative
-        padding-top: $navbar-height
-        margin-top: (-$navbar-height)
     img
       position: relative
   .dark
@@ -140,6 +138,7 @@ a.link-light
 
 /* tab */
 .nav-pills
+  margin-bottom: 1.0em
   li.active
     a
       background-color: $base
@@ -148,10 +147,16 @@ a.link-light
     a:hover
       background-color: $base
 .tab-content
-  .tab-pane
-    min-height: 10em * 2
   li
-    a
+    a.btn
+      color: $black
       font-size: 130% 
-      line-height: 1.8em
+      margin-bottom: 0.5em
+      background-color: transparent
+    a:hover.btn
+      color: $white
+      background-color: $base
+    a:focus.btn
+      color: $white
+      background-color: $base
 
