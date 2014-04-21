@@ -97,8 +97,6 @@ a.link-light
       margin: $content-mergin auto
       .row
         position: relative
-        padding-top: $navbar-height
-        margin-top: (-$navbar-height)
     img
       position: relative
   .dark
@@ -115,6 +113,7 @@ a.link-light
   [class^="icon-"]:before,
   [class*="icon-"]:before
     margin-left: 0
+    margin-right: 0.1em
 
 /* carousel */
 .carousel
@@ -136,4 +135,28 @@ a.link-light
   color: #999
   a
     color: $black + #333
+
+/* tab */
+.nav-pills
+  margin-bottom: 1.0em
+  li.active
+    a
+      background-color: $base
+    a:focus
+      background-color: $base
+    a:hover
+      background-color: $base
+.tab-content
+  li
+    a.btn
+      color: $black
+      font-size: 130% 
+      margin-bottom: 0.5em
+      background-color: transparent
+    a:hover.btn
+      color: $white
+      background-color: $base
+    a:focus.btn
+      color: $white
+      background-color: $base
 
