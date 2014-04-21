@@ -3,6 +3,7 @@
 source 'http://rubygems.org'
 
 gem 'middleman', '~>3.2.2'
+gem 'middleman-sprockets', '3.3.1'
 gem 'slim', '~> 2.0.2'
 
 # Live-reloading plugin
