@@ -10,7 +10,7 @@ http://tmd45.jp/ to http://tmd45.github.io/
 git clone git@github.com:tmd45/tmd45.github.io.git
 cd tmd45.github.io
 git checkout source
-bundle install --path vendor/bundle --binstubs vendor/bundle/bin
+./script/bootstrap
 ```
 
 When use direnv, do `direnv allow` in there.
