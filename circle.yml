@@ -1,0 +1,23 @@
+general:
+  branches:
+    only:
+      - source
+
+machine:
+  timezone: Asia/Tokyo
+
+dependencies:
+  pre:
+    - ./script/bootstrap
+
+test:
+  override:
+    - bundle exec middleman build
+
+deployment:
+  publish:
+    branch: source
+    commands:
+      - git config --global user.name 'circleci'
+      - git config --global user.email 'tmd45@otegami.jpn.org'
+      - bundle exec middleman deploy
