@@ -55,6 +55,8 @@ end
 #   end
 # end
 
+activate :syntax, line_numbers: true
+
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'images'
@@ -77,4 +79,10 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-activate :syntax, line_numbers: true
+activate :deploy do |deploy|
+  deploy.method = :git
+  # User ページであるため 'master'
+  deploy.branch = 'master'
+  # Run Automatically
+  # deploy.build_before = true
+end
