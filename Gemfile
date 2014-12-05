@@ -15,4 +15,5 @@ gem 'middleman-livereload', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'zurui-sass-middleman', '~> 0.0.2'
 gem 'middleman-syntax'
+gem 'middleman-deploy'
 
