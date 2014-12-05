@@ -2,6 +2,8 @@
 
 http://tmd45.jp/ to http://tmd45.github.io/
 
+[![Circle CI](https://circleci.com/gh/tmd45/tmd45.github.io/tree/source.svg?style=svg)](https://circleci.com/gh/tmd45/tmd45.github.io/tree/source)
+
 ## Setup
 
 ```
@@ -31,7 +33,9 @@ $ middleman {server}
 
 ## Deploy
 
-in local:
+:dart: trigger merge/commit to `source` branch for deploying by CircleCI.
+
+from local:
 
 ```
 $ cd tmd45.github.io
