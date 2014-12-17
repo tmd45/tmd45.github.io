@@ -1,5 +1,7 @@
 # http://tmd45.jp/
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tmd45/tmd45.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 http://tmd45.jp/ to http://tmd45.github.io/
 
 [![Circle CI](https://circleci.com/gh/tmd45/tmd45.github.io/tree/source.svg?style=svg)](https://circleci.com/gh/tmd45/tmd45.github.io/tree/source)
