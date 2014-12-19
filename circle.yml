@@ -1,7 +1,7 @@
 general:
   branches:
-    only:
-      - source
+    ignore:
+      - master
 
 machine:
   timezone: Asia/Tokyo
