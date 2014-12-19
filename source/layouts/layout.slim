@@ -10,6 +10,11 @@ html[lang="ja"]
     title
       = current_page.data.title || "tmd45.github.io"
     = stylesheet_link_tag "normalize", "all"
+    /! HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /! [if lt IE 9]
+    script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
+    script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"
+    /! [endif]
   body
     = yield
     script[src="//code.jquery.com/jquery-1.10.2.min.js"]
