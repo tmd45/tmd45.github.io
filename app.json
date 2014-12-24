@@ -1,0 +1,6 @@
+{
+    "name": "tmd45.github.io",
+    "env": {
+        "BUILDPACK_URL": "git://github.com/ddollar/heroku-buildpack-multi"
+    }
+}
