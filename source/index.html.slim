@@ -114,13 +114,29 @@ header.container-fluid[style="padding:0;"]
   #page-activity.container-fluid.home-page.dark
     #activity-carousel.carousel.carousel-fade.slide[data-ride="carousel"]
       ol.carousel-indicators
-        li.active[data-target="#activity-carousel" data-slide-to="0" title="2014"]
-        li[data-target="#activity-carousel" data-slide-to="1" title="2013"]
-        li[data-target="#activity-carousel" data-slide-to="2" title="2012"]
-        li[data-target="#activity-carousel" data-slide-to="3" title="2011"]
-        li[data-target="#activity-carousel" data-slide-to="4" title="2010"]
-        li[data-target="#activity-carousel" data-slide-to="5" title="2009"]
+        li[data-target="#activity-carousel" data-slide-to="0" title="2015"]
+        li.active[data-target="#activity-carousel" data-slide-to="1" title="2014"]
+        li[data-target="#activity-carousel" data-slide-to="2" title="2013"]
+        li[data-target="#activity-carousel" data-slide-to="3" title="2012"]
+        li[data-target="#activity-carousel" data-slide-to="4" title="2011"]
+        li[data-target="#activity-carousel" data-slide-to="5" title="2010"]
+        li[data-target="#activity-carousel" data-slide-to="6" title="2009"]
       .carousel-inner
+        .item
+          .container.content-inner
+            .row
+              .col-md-12.html-item
+                h2
+                  | Activity 
+                  small
+                    | 2015
+                .col-md-6
+                  dl
+                    dt
+                      = Time.local(2015,1,1).strftime('%F %a.')
+                    dd
+                      | まだなにもしてないよ
+                .col-md-6
         .item.active
           .container.content-inner
             .row
@@ -131,6 +147,18 @@ header.container-fluid[style="padding:0;"]
                     | 2014
                 .col-md-6
                   dl
+                    dt
+                      = Time.local(2014,12,29).strftime('%F %a.')
+                    dd
+                      a[href="http://www.comiket.co.jp/info-a/C87/C87info.html" title="コミックマーケット87"]
+                        | コミックマーケット87 2日目 サークル参加（東ア60b）
+                    dt
+                      = Time.local(2014,12,20).strftime('%F %a.')
+                      |  ~ 
+                      = Time.local(2014,12,21).strftime('%F %a.')
+                    dd
+                      a[href="http://ffxiv-fanfest.com/jp/" title="FFXIVファンフェスティバル2014東京"]
+                        | FFXIVファンフェスティバル2014東京
                     dt
                       = Time.local(2014,9,18).strftime('%F %a.')
                       |  ~ 
@@ -143,6 +171,11 @@ header.container-fluid[style="padding:0;"]
                     dd
                       a[href="http://kosendj-bu.in/" title="KosenDJ-bu #2 / 受付お姉さんやります"]
                         | KosenDJ-bu #2
+                    dt
+                      = Time.local(2014,8,3).strftime('%F %a.')
+                    dd
+                      a[href="http://www.pasela.co.jp/paselabo_shop/ff_eorzea/" title="FFXIVコラボ エオルゼアカフェ"]
+                        | エオルゼアカフェ SORAMAMEオフ会
                 .col-md-6
                   dl
                     dt
