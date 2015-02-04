@@ -7,6 +7,7 @@
 # Ignore bundler config
 /.bundle
 /vendor/bundle
+/vendor/assets
 
 # Ignore the build directory
 /build
