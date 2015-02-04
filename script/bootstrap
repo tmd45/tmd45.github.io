@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+#
+# Check for Bundler
+#
+if [ ! $(which bundle) ]; then
+    echo "  x You need to install Bundler:"
+    echo "    gem install bundler"
+    exit
+else
+    echo "  + Bundler found."
+fi
+
+echo "  + Install ruby gems."
+bundle check --path=vendor/bundle > /dev/null || \
+  bundle install --path vendor/bundle --binstubs vendor/bundle/bin --jobs=4 --retry=3 --quiet
