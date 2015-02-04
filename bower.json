@@ -1,0 +1,16 @@
+{
+  "name": "tmd45.github.io",
+  "version": "0.0.0",
+  "homepage": "http://tmd45.jp",
+  "authors": [
+    "Yoko TAMADA <tmd45@otegami.jpn.org>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
