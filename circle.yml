@@ -1,0 +1,15 @@
+general:
+  branches:
+    only:
+      - source
+
+machine:
+  timezone: Asia/Tokyo
+
+dependencies:
+  pre:
+    - ./script/bootstrap
+
+test:
+  override:
+    - bundle exec middleman build
