@@ -46,3 +46,12 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
 end
+###
+# Bower Components Support
+# see: http://qiita.com/osakanafish/items/f7866947e3c487eb9e70
+###
+after_configuration do
+  bowerrc = JSON.parse File.read(File.join "#{root}", '.bowerrc')
+  bower_dir = bowerrc['directory']
+  sprockets.append_path File.join("#{root}", bower_dir)
+end
