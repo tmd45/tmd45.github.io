@@ -1,0 +1,23 @@
+doctype html
+html[lang="ja"]
+  head
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"]
+    meta[name="description" content=""]
+    meta[name="author" content="tmd45"]
+    link[rel="shortcut icon" href="favicon.ico"]
+    title
+      = current_page.data.title || "tmd45.github.io"
+    /! CSS
+    = stylesheet_link_tag "components", "style"
+    /! HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /! [if lt IE 9]
+    script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
+    script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"
+    /! [endif]
+  body
+    = yield
+
+    /! Scripts
+    script src="//code.jquery.com/jquery-2.1.1.min.js"
+    = javascript_include_tag "components", "init"
