@@ -1,76 +1,116 @@
 ---
 title: tmd45.jp
 ---
-nav.light-blue.lighten-1[role="navigation"]
-  .container
-    .nav-wrapper
-      a.brand-logo#logo-container[href="/"] tmd45.jp
-      ul.right.side-nav#nav-mobile
+header
+  .container.hide-on-large-only.mobile-title
+    .row
+      .col.s12
+        a.button-collapse.top-nav.full[href="#" data-activates="mobile-slide-out"]
+          i.mdi-navigation-menu.medium
+        h1.right tmd45.jp
+  ul.side-nav.fixed#mobile-slide-out
+    li.logo.hide-on-med-and-down
+      a[href="/"]
+        = image_tag('icon-tmd45-tw.jpg', class: 'circle responsive-img')
+        h1.logo-title tmd45.jp
+    li.social.waves-effect
+      .container
+        .row
+          .col.s4
+            a[href="http://github.com/tmd45"]
+              i.fa.fa-github.small
+          .col.s4
+            a[href="http://twitter.com/tmd45"]
+              i.fa.fa-twitter.small
+          .col.s4
+            a[href="http://instagram.com/tmd45"]
+              i.fa.fa-instagram.small
+    li.waves-effect
+      a[href="#profile"] Profile
+    li.waves-effect
+      a[href="http://blog.tmd45.jp"] Blog
+    li.no-padding
+      ul.collapsible.collapsible-accordion
         li
-          a[href="#"] Navbar Link
-      a.button-collapse[href="#" data-activates="nav-mobile"]
-        i.mdi-navigation-menu
-.section.no-pad-bot#index-banner
-  .container
-    br
-    br
-    h1.header.center.orange-text Starter Template
-    .row.center
-      h5.header.col.s12.light A modern responsive front-end framework based on Material Design
-    .row.center
-      a.btn-large.waves-effect.waves-light.orange#download-button[href="#"] Get Started
-    br
-    br
-.container
-  .section
-    /! Icon Section
-    .row
-      .col.s12.m4
-        .icon-block
-          h2.center.light-blue-text
-            i.mdi-image-flash-on
-          h5.center Speeds up development
-          p.light
-            | We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-      .col.s12.m4
-        .icon-block
-          h2.center.light-blue-text
-            i.mdi-social-group
-          h5.center User Experience Focused
-          p.light
-            | By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
-      .col.s12.m4
-        .icon-block
-          h2.center.light-blue-text
-            i.mdi-action-settings
-          h5.center Easy to work with
-          p.light
-            | We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
-
-    .section
-
-footer.page-footer.orange
+          a.waves-effect.collapsible-header[href="#activity"] Activity
+          .collapsible-body
+            ul
+              li.waves-effect
+                a[href="#activity-2009"] 2009
+              li.waves-effect
+                a[href="#activity-2010"] 2010
+              li.waves-effect
+                a[href="#activity-2011"] 2011
+              li.waves-effect
+                a[href="#activity-2012"] 2012
+              li.waves-effect
+                a[href="#activity-2013"] 2013
+              li.waves-effect
+                a[href="#activity-2014"] 2014
+              li.waves-effect
+                a[href="#activity-2015"] 2015
+    li.waves-effect
+      a[href="#identification"] Identification
+main
   .container
     .row
-      .col.l6.s12
-        h5.white-text Company Bio
-        p.grey-text.text-lighten-4
-          | We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
-      .col.l3.s12
-        h5.white-text Settings
-        ul
-          li: a.white-text[href="#!"] Link 1
-          li: a.white-text[href="#!"] Link 2
-          li: a.white-text[href="#!"] Link 3
-          li: a.white-text[href="#!"] Link 4
-      .col.l3.s12
-        h5.white-text Connect
-        ul
-          li: a.white-text[href="#!"] Link 1
-          li: a.white-text[href="#!"] Link 2
-          li: a.white-text[href="#!"] Link 3
-          li: a.white-text[href="#!"] Link 4
+      .col.s12.m9.l10
+        .section.scrollspy#profile
+          h3 Profile
+          h4 Yoko TAMADA, @tmd45
+          p I'm a web engineer in Tokyo, Japan.
+          p
+            | Interested in web development, user experience, and design. 
+            | I 
+            i.mdi-action-favorite-outline
+            |  so many more interesting things.
+
+          h5 Skills
+          dl
+            dt Programming Language
+            dd Ruby, Java, and a little JavaScript, PHP.
+
+            dt Frameworks
+            dd Ruby on Rails. Struts1.x(my god!), Spring, Hibernate in Java. FuelPHP in PHP.
+
+            dt Markup Language
+            dd HTML + CSS, Sass, Markdown, and Hatena Syntax.
+
+            dt Systems
+            dd OS X, Solaris, and Cent OS.
+
+            dt Tools
+            dd
+              | Vim, Eclipse, and Git, 
+              i.mdi-action-favorite-outline
+              |  Github
+
+        .section.scrollspy#activity
+          h3 Activity
+          p
+            | content
+        .section.scrollspy#identification
+          h3 Identification
+          p
+            | content
+      .col.hide-on-small-only.m3.l12
+        .toc-wrapper.pin-top
+          | we?
+footer.page-footer
+  .container
+    .row
+      .col.l4.s12
+        h5 title
+        p
+          | content
+      .col.l4.s12
+        h5 title
+        p
+          | content
+      .col.l4.s12
+        h5 title
+        p
+          | content
   .footer-copyright
     .container
-      | Made by 
-      a.orange-text.text-lighten-3[href="http://materializecss.com"] Materialize
+      | &copy; 2009-2015 tmd45.jp

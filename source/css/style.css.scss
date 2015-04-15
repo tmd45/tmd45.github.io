@@ -1,9 +1,144 @@
+@charset "utf-8";
+
 /* Custom Stylesheet */
 
-.icon-block {
-  padding: 0 15px;
+/* fix import conpornent
+-------------------------------------------------------- */
+
+i.fa {
+  line-height: inherit;
+}
+
+/* 参考: 色彩センスのいらない配色講座
+http://www.slideshare.net/marippe/ss-9003317
+base: 70%, main: 25%, accent: 5% */
+/* http://www.materialpalette.com/deep-purple/lime */
+$text-primary:   #212121;
+$text-secondary: #727272;
+$text-inverse:   #ffffff;
+
+$color-base:          #fcfcfc;
+$color-divider:       #b6b6b6;
+$color-primary-dark:  #512da8;
+$color-primary:       #673ab7;
+$color-primary-light: #d1c4e9;
+$color-accent:        #cddc39;
+
+$side-nav-width: 240px;
+
+body {
+  background: $color-base;
+  font-size: 15px;
+}
+body * {
+  font-family: "游ゴシック","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","MS ゴシック",sans-serif;
+  font-weight: normal;
+}
+
+header,
+main,
+footer {
+  padding-left: $side-nav-width;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a {
+  /* スムージングで文字が太くなるのを無くしたい */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* for side-nav */
+.side-nav {
+  overflow: scroll;
+}
+
+.logo {
+  background: $color-primary;
+  border-bottom: 1px solid $color-divider
+}
+.logo:hover {
+  background: $color-primary + #111 !important;
+}
+.logo a {
+  text-align: center;
+}
+.logo img {
+  margin-top: 1em;
+}
+.logo-title {
+  margin: 0; padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: $text-inverse;
+}
+
+.social .container {
+  width: 100%;
+}
+.social .row {
+  padding: 13px 0;
+  margin-bottom: 0;
+}
+.social .col {
+  text-align: center;
+}
+.social a {
+  padding: 0 !important;
+}
+.social a:hover {
+  color: $text-inverse !important;
 }
 
 footer.page-footer {
-  margin-top: 40px;
+  background: $color-primary;
+}
+.page-footer {
+  h5, p {
+    color: $text-inverse;
+  }
+}
+
+/* for PC
+-------------------------------------------------------- */
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* for mobile
+ -------------------------------------------------------- */
+@media only screen and (max-width : 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+
+.mobile-title {
+  width: 100%;
+  background: $color-primary;
+
+  h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: $text-inverse;
+    margin-right: 3.5%;
+  }
+}
+
+a.button-collapse.top-nav {
+  position: absolute;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  float: none;
+  margin-left: 1.5rem;
+  color: $color-accent;
+  font-size: 32px;
+  z-index: 2;
+}
+a.button-collapse.top-nav.full {
+  line-height: 122px;
 }
