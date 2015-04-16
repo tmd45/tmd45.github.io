@@ -58,9 +58,11 @@ main
             | so many more interesting things.
           .container.profile-images
             .row
-              .col.s1
+              .col.l2.m2.s3
                 = image_tag('icon-tmd45-old.png', class: 'circle responsive-img')
-              .col.s1
+              .col.l2.m2.s3
+                = image_tag('icon-tmd45-tw.jpg', class: 'circle responsive-img')
+              .col.l2.m2.s3
                 = image_tag('icon-tmd45-fb.jpg', class: 'circle responsive-img')
 
           h5 Skills
@@ -346,7 +348,7 @@ main
 footer.page-footer
   .container.scrollspy#identification
     .row
-      .col.l3.s12
+      .col.l3.m4.s6
         h5 Social
         ul
           li: a[href="http://twitter.com/tmd45"] Twitter
@@ -366,7 +368,7 @@ footer.page-footer
         ul
           li: a[href="http://www.lastfm.jp/user/tmd45fm"] Last.fm
 
-      .col.l3.s12
+      .col.l3.m4.s6
         h5 Development
         ul
           li: a[href="https://github.com/tmd45"] GitHub
@@ -379,7 +381,7 @@ footer.page-footer
           li: a[href="https://forkwell.com/u/tmd45"] forkwell
           li: a[href="http://www.codecademy.com/profiles/tmd45"] Codecademy
 
-      .col.l3.s12
+      .col.l3.m4.s6
         h5 Useful
         ul
           li: a[href="http://www.slideshare.net/tmd45/"] SlideShare
@@ -398,7 +400,7 @@ footer.page-footer
           li: a[href="https://healthmate.withings.com/home"] Withings
           li: a[href="http://www.fitbit.com/user/25NJWR"] Fitbit
 
-      .col.l3.s12
+      .col.l3.m4.s6
         h5 Bookmark
         ul
           li: a[href="http://b.hatena.ne.jp/tmd45/bookmark"] はてなブックマーク
@@ -413,8 +415,8 @@ footer.page-footer
             hatena_counter_id = "11";
             hatena_counter_ref = document.referrer+"";
             hatena_counter_screen = screen.width + "x" + screen.height+","+screen.colorDepth;
-          | #
-          script[type="text/javascript" src="http://counter.hatena.ne.jp/js/counter.js"]
+        | #
+        script[type="text/javascript" src="http://counter.hatena.ne.jp/js/counter.js"]
         noscript
           img[src="http://counter.hatena.ne.jp/tmd45/11" border="0" alt="counter"]
 
