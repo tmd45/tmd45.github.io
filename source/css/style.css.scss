@@ -48,28 +48,44 @@ p, a, i {
 }
 
 /* for side-nav */
-.side-nav {
-  overflow: scroll;
-}
+ul.side-nav.fixed {
+  overflow: auto;
 
-.logo {
-  background: $color-primary;
-  border-bottom: 1px solid $color-divider
-}
-.logo:hover {
-  background: $color-primary + #111 !important;
-}
-.logo a {
-  text-align: center;
-}
-.logo img {
-  margin-top: 1em;
-}
-.logo-title {
-  margin: 0; padding: 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: $text-inverse;
+  li.logo {
+    margin: 0; padding: 0;
+    background: $color-primary;
+    border-bottom: 1px solid $color-divider;
+    :hover {
+      background: $color-primary + #111;
+    }
+
+    .section {
+      height: 270px;
+      padding: 1.3rem 1rem;
+    }
+    a {
+      display: block;
+      text-align: center;
+      :hover {
+        background: transparent;
+      }
+    }
+    h1.logo-title {
+      margin: 0; padding: 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: $text-inverse;
+    }
+  }
+
+  li {
+    line-height: 62px;
+
+    a {
+      line-height: 62px;
+      height: 62px;
+    }
+  }
 }
 
 .social {
