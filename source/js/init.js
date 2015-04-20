@@ -1,9 +1,7 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav({
-      closeOnClick: true
-    })
+    $('.button-collapse').sideNav();
 
     $('.collapsible').collapsible();
 
