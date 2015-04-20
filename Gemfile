@@ -11,5 +11,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'middleman', '~> 3.0'
 gem 'middleman-blog'
 gem 'middleman-livereload'
+gem 'middleman-deploy'
 
 gem 'slim', '~> 3.0.2'
