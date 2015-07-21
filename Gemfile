@@ -16,4 +16,4 @@ gem 'middleman-deploy'
 gem 'slim', '~> 3.0.2'
 
 # for Heroku
-gem 'puma'
+gem 'puma', '~> 2.11.3'
