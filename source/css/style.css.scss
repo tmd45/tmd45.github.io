@@ -79,6 +79,7 @@ ul.side-nav.fixed {
   }
 
   li {
+    display: block;
     line-height: 62px;
 
     a {
@@ -99,15 +100,14 @@ ul.side-nav.fixed {
   .col {
     text-align: center;
   }
-}
-.social a {
-  padding: 0 !important;
 
-  :hover {
-    color: $text-inverse !important;
+  a {
+    padding: 0 !important;
+    :hover {
+      color: $text-inverse !important;
+    }
   }
 }
-
 header {
   border-top: 5px solid $color-primary-dark;
 }
