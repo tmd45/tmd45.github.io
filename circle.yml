@@ -1,7 +1,7 @@
 general:
   branches:
-    only:
-      - source
+    ignore:
+      - master
 
 machine:
   timezone: Asia/Tokyo
@@ -13,3 +13,11 @@ dependencies:
 test:
   override:
     - bundle exec middleman build
+
+deployment:
+  publish:
+    branch: source
+    commands:
+      - git config --global user.name 'circleci'
+      - git config --global user.email 'tmd45@otegami.jpn.org'
+      - bundle exec middleman deploy
