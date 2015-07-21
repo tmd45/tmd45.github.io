@@ -86,6 +86,17 @@ ul.side-nav.fixed {
       line-height: 62px;
       height: 62px;
     }
+
+    ul {
+      li {
+        a {
+          i {
+            margin-right: 0;
+            width: inherit;
+          }
+        }
+      }
+    }
   }
 }
 
