@@ -86,3 +86,14 @@ after_configuration do
     end
   end
 end
+
+###
+# Deploy-specific configuration
+###
+activate :deploy do |deploy|
+  deploy.method = :git
+  # User ページであるため 'master'
+  deploy.branch = 'master'
+  # Run Automatically
+  # deploy.build_before = true
+end
