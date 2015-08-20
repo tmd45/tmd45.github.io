@@ -332,8 +332,14 @@ main
 
           h5.scrollspy#activity-2015 2015
           dl
-            dt = fmtDate()
-            dd Nothing do something yet!
+            dt
+              = fmtDate(20150821)
+              |  ~ 
+              = fmtDate(20150822)
+            dd: a[href="http://yapcasia.org/2015/"] YAPC::Asia Tokyo 2015
+
+            dt = fmtDate(20150826)
+            dd: a[href="https://openid.doorkeeper.jp/events/29487"] OpenID TechNight Vol.13 - ID連携入門
 
       .col.hide-on-small-only.m3.l2
         .powered-wrapper
