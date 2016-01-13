@@ -1,5 +1,8 @@
 Time.zone = 'Tokyo'
 
+# see https://github.com/middleman/middleman/issues/612
+Slim::Engine.disable_option_validator!
+
 ###
 # Middleman Blog Setting
 ###
