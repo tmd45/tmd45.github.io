@@ -53,330 +53,34 @@ main
       .col.s12.m9.l10
         .section.scrollspy#profile
           h3 Profile
-          h4 Yoko TAMADA, @tmd45
-          p.flow-text I'm a web engineer in Tokyo, Japan.
-          p
-            | Interested in web development, user experience, and UI design. 
-            | I
-            i.fa.fa-heart-o<>
-            | so many more interesting things.
-          .container.profile-images
-            .row
-              .col.l2.m2.s3
-                = image_tag('icon-tmd45-2015.png', class: 'circle responsive-img')
-              .col.l2.m2.s3
-                = image_tag('icon-tmd45-tw.jpg', class: 'circle responsive-img')
-              .col.l2.m2.s3
-                = image_tag('icon-tmd45-fb.jpg', class: 'circle responsive-img')
-              .col.l2.m2.s3
-                = image_tag('icon-tmd45-fb2015.jpg', class: 'circle responsive-img')
-
-          h5 Skills
-          dl
-            dt Programming Language
-            dd Ruby, Java, and a little PHP.
-
-            dt Frameworks
-            dd Ruby on Rails. Struts1.x, Spring, Hibernate in Java. FuelPHP in PHP.
-
-            dt Markup Language
-            dd HTML + CSS, Sass, Markdown, and Hatena Syntax.
-
-            dt Systems
-            dd OS X, Solaris, and Cent OS.
-
-            dt Tools
-            dd Vim, Eclipse, and Git, GitHub, Slack.
-
-          h5 Hobby
-          ul
-            li Now most favorite games FinalFantasyXIV. I'm playing WhiteMage.
-
-          h5 Contact
-          ul
-            li
-              i.fa.fa-twitter.fa-fw>
-              | tmd45
-            li
-              i.fa.fa-envelope-o.fa-fw>
-              | tmd45[at]otegami.jpn.org
-            li
-              i.fa.fa-skype.fa-fw>
-              | tmd45call
+          == partial 'profile'
 
         .section.scrollspy#activity
           h3 Activity
 
           h5.scrollspy#activity-2009 2009
-          dl
-            dt = fmtDate(20091017)
-            dd: a[href="http://www.jam-anime.jp/"] ジャパン・アニメコラボ・マーケット2009
-            dd: a[href="http://atnd.org/events/1804"] Pokenエバンジェリストと行く 新橋餃子の旅
-
-            dt = fmtDate(20091128)
-            dd: a[href="http://atnd.org/events/2187"] Poken餃子部定例会議200911
-
-          dl.self-activity
-            dt = fmtDate(20090922)
-            dd: a[href="http://kokucheese.com/event/index/444/"] 東京#twinomi ツイッター飲み会 in 新宿
-
+          == partial 'activity2009'
+          
           h5.scrollspy#activity-2010 2010
-          dl
-            dt = fmtDate(20100121)
-            dd: a[href="http://atnd.org/events/2783"] SocialWeb2.0Partyニューイヤー・スペシャルセッション2WeekNight－第1夜－
-
-            dt = fmtDate(20100209)
-            dd: a[href="http://poken.jp/ja/news/poken%e7%89%b9%e5%85%b8%ef%bc%88%e3%83%87%e3%83%aa%e3%83%aa%e3%82%a6%e3%83%a0%e3%82%ab%e3%83%95%e3%82%a7%e3%83%88%e3%83%bc%e3%82%ad%e3%83%a7%e3%83%bc%ef%bc%89%e3%81%a82%e6%9c%88%e3%81%aeofficial-meet/"] Poken Official Meet Up＠デリリウムカフェトーキョー
-
-            dt = fmtDate(20100213)
-            dd: a[href="http://atnd.org/events/2893"] 人見知りのための餃子ツイノミ
-
-            dt = fmtDate(20100220)
-            dd: a[href="http://twtvite.com/2c6hl2"] Twitter京王沿線deオフ #keioff
-
-            dt = fmtDate(20100306)
-            dd: a[href="http://atnd.org/events/2931"] fujimotta&fujimonao祝宴会
-
-            dt = fmtDate(20100307)
-            dd: a[href="http://atnd.org/events/3064"] Poken Meet Up in Nagoya #pmun
-
-            dt = fmtDate(20100312)
-            dd: a[href="http://tweetvite.com/event/sweets_n_poken"] Sweet Treats Night for Sweets&rsquo; Lovers &amp; #POKEN Friends
-
-            dt = fmtDate(20100313)
-            dd: a[href="http://atnd.org/events/3400"] たこ焼きBarふるふる（こじんまりバージョン）
-
-            dt = fmtDate(20100328)
-            dd: a[href="http://atnd.org/events/3299"] お好み焼き＆たこ焼き Bar ふるふる 2010年3月の会
-
-            dt = fmtDate(20100515)
-            dd: a[href="http://www.designfesta.com/"] デザイン・フェスタ vol.31
-            dd: a[href="http://atnd.org/events/4500"] Poken餃子部定例会 2010/05/15
-
-            dt = fmtDate(20100522)
-            dd: a[href="http://blog.belgaube.com/?eid=963779"] Poken Meets UP with Huyghe Brewery!!!! @DC TOKYO
-
-            dt
-              = fmtDate(20100522)
-              |  ~ 
-              = fmtDate(20100622)
-            dd: a[href="http://blog.belgaube.com/?eid=957698"] DeliriumCafe Meets Poken "Tweet Rally"
-
-            dt = fmtDate(20100619)
-            dd: a[href="http://tweetvite.com/event/dcreserve"] パクチーハウス東京＠デリリウムカフェ レゼルブ
-
-            dt = fmtDate(20100731)
-            dd: a[href="http://ll.jus.or.jp/2010/"] Lightweight Language Tiger
-
-            dt = fmtDate(20100906)
-            dd: a[href="http://wiki.eclipse.org/Eclipse_DemoCamps_Helios_2010/Tokyo"] Eclipse DemoCamp Helios 2010 Tokyo
-
-            dt = fmtDate(20101002)
-            dd: a[href="http://kosenconf.jp/?014tokyo"] 高専カンファレンス 2010秋 in 東京
-
-            dt = fmtDate(20101221)
-            dd: a[href="http://atnd.org/events/10093"] PHP 『 超 』 初心者勉強会 基礎編
-
-            dt = fmtDate(20101225)
-            dd: a[href="http://atnd.org/events/10474"] クリスマスに六本木にある大阪の飛び地でお好み焼きを堪能する会
-
-          dl.self-activity
-            dt = fmtDate(20100109)
-            dd: a[href="http://atnd.org/events/2619"] 東京つい飲み★2010新年会
-
-            dt = fmtDate(20100417)
-            dd: a[href="http://atnd.org/events/3337"] 東京つい飲み★2010春〜華は無くとも酒は美味い！
-
-            dt = fmtDate(20100724)
-            dd: a[href="http://atnd.org/events/6008"] 東京ついモフ★猫カフェ読書会
-
+          == partial 'activity2010'
+          
           h5.scrollspy#activity-2011 2011
-          dl
-            dt = fmtDate(20110109)
-            dd: a[href="http://atnd.org/events/11157"] 2011年高専クラスタ新年会
-
-            dt = fmtDate(20110129)
-            dd: a[href="http://atnd.org/events/12113"] 六本木お好み焼き「はてな」で新年会
-
-            dt = fmtDate(20110211)
-            dd: a[href="http://www.belgaube.jp/page/bosteels"] デリリウムカフェ・ベルオーブ全店 ボステールス・キャンペーン 便乗飲み会
-
-            dt = fmtDate(20110212)
-            dd: a[href="http://kosenconf.jp/?020salesio"] 高専カンファレンス in サレジオ2
-
-            dt = fmtDate(20110226)
-            dd: a[href="http://tcc.nifty.com/cs/catalog/tcc_schedule/catalog_110112203353_1.htm"] 駄目な文房具ナイト4
-
-            dt
-              = fmtDate(20110311)
-              span.pink-text.text-accent-3< 311
-            dd: a[href="https://www.asial.co.jp/school/course_detail/19"] PHP技術者認定試験対策口座＋試験
-
-            dt = fmtDate(20110319)
-            dd: a[href="http://atnd.org/events/13923"] 再企画！なんで屋さんから出前を取ってHiddenLoungeさんでいただく会
-
-            dt = fmtDate(20110321)
-            dd: a[href="https://www.asial.co.jp/school/course_detail/19"] PHP技術者認定試験対策口座＋試験（再）
-
-            dt = fmtDate(20110409)
-            dd: a[href="http://kokucheese.com/event/index/9530/"] DevLOVE Beautiful Development
-
-            dt = fmtDate(20110416)
-            dd: a[href="http://fly8.jp/catanplaylive/"] カタンで遊ぼう！
-
-            dt = fmtDate(20110417)
-            dd 高専g86会；花見＆東北のおいしいもの！
-
-            dt = fmtDate(20110423)
-            dd: a[href="http://kokucheese.com/event/index/9778/"] DevLOVE 今、未来に繋がるために帆を立てるとき。
-            dd: a[href="http://atnd.org/events/14587"] 飲んで応援！東北〜関東の酒もってこーい！
-
-            dt = fmtDate(20110514)
-            dd: a[href="http://coolnotify.com/cicon"] CodeIgniter東京勉強会
-
-            dt = fmtDate(20110616)
-            dd: a[href="http://atnd.org/events/16018"] ACT in agile
-
-            dt = fmtDate(20110625)
-            dd: a[href="http://kosenconf.jp/?030joshi-tokyo"] 高専女子カンファレンス2
-
-            dt = fmtDate(20110716)
-            dd: a[href="http://kosenconf.jp/?034nagano"] 高専カンファレンス in 長野2
-
-            dt = fmtDate(20110730)
-            dd: a[href="http://tcc.nifty.com/cs/catalog/tcc_schedule/catalog_091202202710_1.htm"] 駄目な文房具ナイトEX
-
-            dt = fmtDate(20110917)
-            dd: a[href="http://tcc.nifty.com/cs/catalog/tcc_schedule/catalog_110816203681_1.htm"] ITコミュニティ夏祭り
-
-          dl.self-activity
-            dt = fmtDate(20110115)
-            dd: a[href="http://atnd.org/events/10908"] 東京ついモフ★猫カフェ読書会〜2011新春
-
-            dt = fmtDate(20110430)
-            dd: a[href="http://atnd.org/events/12602"] 東京ついモフ★猫カフェ読書会〜2011春暖の候
-
+          == partial 'activity2011'
+          
           h5.scrollspy#activity-2012 2012
-          dl
-            dt = fmtDate(20120708)
-            dd: a[href="http://atnd.org/event/fuelphp/0"] FuelPHP勉強会 東京
-
-            dt = fmtDate(20120804)
-            dd: a[href="http://ll.jus.or.jp/2012/"] Lightweight Language Decade
-
-            dt
-              = fmtDate(20120907)
-              |  ~ 
-              = fmtDate(20120908)
-            dd: a[href="http://www.ospn.jp/osc2012-fall/"] オープンソースカンファレンス20120 Tokyo/Fall（2日目 13:00～参加）
-
-            dt = fmtDate(20120915)
-            dd: a[href="http://phpcon.php.gr.jp/w/2012/"] PHP カンファレンス 2012
-
-            dt = fmtDate(20120923)
-            dd: a[href="http://atnd.org/events/31017"] FuelPHP 勉強会 東京 vol.2
-
-          dl.self-activity
-            dt = fmtDate(20120225)
-            dd: a[href="http://atnd.org/events/24986"] 東京ついモフ★猫カフェ読書会～2012云々
-
+          == partial 'activity2012'
+          
           h5.scrollspy#activity-2013 2013
-          dl
-            dt = fmtDate(20130615)
-            dd: a[href="http://kosenconf.github.io/5th-anniversary/"] 高専カンファレンス 5 周年記念パーティ
-
-            dt
-              = fmtDate(20130801)
-              span.teal-text.text-accent-3< change!
-            dd
-              | join 
-              a[href="http://www.feedforce.jp/"] feedforce Inc.
-
+          == partial 'activity2013'
+          
           h5.scrollspy#activity-2014 2014
-          dl
-            dt = fmtDate(20140322)
-            dd: a[href="http://kosenconf.doorkeeper.jp/events/7837"] 高専カンファレンス in 東京 2014
-
-            dt = fmtDate(20140329)
-            dd: a[href="http://regional.rubykaigi.org/tokyu07"] TokyuRuby会議07
-
-            dt = fmtDate(20140419)
-            dd: a[href="http://regional.rubykaigi.org/oedo04/"] 大江戸Ruby会議04
-
-            dt = fmtDate(20140510)
-            dd: a[href="http://atnd.org/events/49952"] Railsセミナー: Why choose Ruby on Rails ?
-
-            dt = fmtDate(20140601)
-            dd: a[href="http://githubkaigi.org/"] GitHub Kaigi
-
-            dt = fmtDate(20140614)
-            dd: a[href="http://kosenconf.doorkeeper.jp/events/11521"] 高専カンファレンス6周年パーティ
-
-            dt = fmtDate(20140803)
-            dd: a[href="http://www.pasela.co.jp/paselabo_shop/ff_eorzea/"] エオルゼアカフェ SORAMAMEオフ会
-
-            dt = fmtDate(20140831)
-            dd: a[href="http://kosendj-bu.in/"] KosenDJ-bu #2
-
-            dt
-              = fmtDate(20140918)
-              |  ~ 
-              = fmtDate(20140920)
-            dd: a[href="http://rubykaigi.org/2014"] RubyKaigi2014
-
-            dt
-              = fmtDate(20141220)
-              |  ~ 
-              = fmtDate(20141221)
-            dd: a[href="http://ffxiv-fanfest.com/jp/"] FFXIVファンフェスティバル2014東京
-
-            dt = fmtDate(20141229)
-            dd: a[href="http://www.comiket.co.jp/info-a/C87/C87info.html"] コミックマーケット87 2日目 サークル参加（東ア60b）
-
+          == partial 'activity2014'
+          
           h5.scrollspy#activity-2015 2015
-          dl
-            dt = fmtDate(20150314)
-            dd: a[href="http://sakenojin.jp/"] にいがた酒の陣 2015
-
-            dt
-              = fmtDate(20150821)
-              |  ~ 
-              = fmtDate(20150822)
-            dd: a[href="http://yapcasia.org/2015/"] YAPC::Asia Tokyo 2015
-
-            dt = fmtDate(20150826)
-            dd: a[href="https://openid.doorkeeper.jp/events/29487"] OpenID TechNight Vol.13 - ID連携入門
-
-            dt = fmtDate(20150906)
-            dd: a[href="https://www.facebook.com/pages/%E5%8D%83%E4%BD%8F%E9%85%92%E5%90%88%E6%88%A6/261235994059960"] ぶらり酒散歩2015
-
-            dt = fmtDate(20151004)
-            dd: a[href="http://realdgame.jp/event/boku7days.html"] リアル脱出ゲーム『僕と勇者の最後の７日間』
-
-            dt = fmtDate(20151108)
-            dd: a[href="http://regional.rubykaigi.org/oedo05/"] 大江戸Ruby会議05
-
-            dt = fmtDate(20151230)
-            dd: a[href="http://www.comiket.co.jp/info-a/C89/C89info.html"] コミックマーケット89 2日目 サークル参加（東ウ26a）
-
+          == partial 'activity2015'
+          
           h5.scrollspy#activity-2016 2016
-          dl
-            dt
-              = fmtDate(20160208)
-              span.lime-text.text-accent-3< TODO
-            dd: a[href="http://eventdots.jp/event/578421"] 「nginx実践入門」出版記念！執筆者らが語る nginx Tech Talks
-
-            dt
-              = fmtDate(20160218)
-              |  ~ 
-              = fmtDate(20160219)
-              span.lime-text.text-accent-3< TODO
-            dd: a[href="http://event.shoeisha.jp/devsumi/20160218/"] Developers Summit 2016 冬
-
-            dt
-              = fmtDate(20160312)
-              span.lime-text.text-accent-3< TODO
-            dd: a[href="http://sakenojin.jp/"] にいがた酒の陣 2016
+          == partial 'activity2016'
 
       .col.hide-on-small-only.m3.l2
         .powered-wrapper
@@ -393,64 +97,7 @@ main
 
 footer.page-footer
   .container.scrollspy#identification
-    .row
-      .col.l3.m4.s6
-        h5 Social
-        ul
-          li: a[href="http://twitter.com/tmd45"] Twitter
-          li: a[href="http://www.facebook.com/tmd45"] Facebook
-          li: a[href="https://plus.google.com/115863220435238435221"] Google+
-
-        h5 Photo
-        ul
-          li: a[href="http://instagram.com/tmd45"] Instagram
-          li: a[href="http://www.flickr.com/photos/tmd45/"] Flickr
-
-        h5 Book
-        ul
-          li: a[href="http://booklog.jp/users/tmd45"] Booklog
-
-        h5 Music
-        ul
-          li: a[href="http://www.lastfm.jp/user/tmd45fm"] Last.fm
-
-      .col.l3.m4.s6
-        h5 Development
-        ul
-          li: a[href="https://github.com/tmd45"] GitHub
-          li: a[href="http://qiita.com/users/tmd45"] Qiita
-          li: a[href="https://circleci.com/"] CircleCI
-          li: a[href="https://travis-ci.org/"] TravisCI
-          li: a[href="https://bitbucket.org/tmd45"] bitbucket
-          li: a[href="http://jsdo.it/tmd45"] jsdo.it
-          li: a[href="https://coderwall.com/tmd45"] coderwall
-          li: a[href="https://forkwell.com/u/tmd45"] forkwell
-          li: a[href="http://www.codecademy.com/profiles/tmd45"] Codecademy
-
-      .col.l3.m4.s6
-        h5 Useful
-        ul
-          li: a[href="http://www.slideshare.net/tmd45/"] SlideShare
-          li: a[href="http://speakerdeck.com/u/tmd45"] SpeakerDeck
-          li: a[href="http://www.evernote.com/about/intl/jp/"] Evernote
-          li: a[href="http://www.easystep.jp/mypage/12872/"] EasyStep
-
-        h5 Hobby
-        ul
-          li: a[href="http://www.pixiv.net/member.php?id=258162"] pixiv
-          li: a[href="http://drawr.net/tmd45"] drawr
-          li: a[href="http://www.fg-site.net/members/97236"] fg
-
-        h5 Health
-        ul
-          li: a[href="https://healthmate.withings.com/home"] Withings
-          li: a[href="http://www.fitbit.com/user/25NJWR"] Fitbit
-
-      .col.l3.m4.s6
-        h5 Bookmark
-        ul
-          li: a[href="http://b.hatena.ne.jp/tmd45/bookmark"] はてなブックマーク
-          li: a[href="http://favstar.fm/users/tmd45"] favstar.fm
+    == partial 'identification'
 
   .footer-copyright
     .container
