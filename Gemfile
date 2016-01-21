@@ -17,3 +17,5 @@ gem 'slim', '~> 3.0.2'
 
 # for Heroku
 gem 'puma', '~> 2.11.3'
+
+gem 'nokogiri', '>= 1.6.7.2'
