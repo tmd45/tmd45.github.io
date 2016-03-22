@@ -91,6 +91,13 @@ after_configuration do
 end
 
 ###
+# Middleman Google Analytics
+###
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-38204078-5'
+end
+
+###
 # Deploy-specific configuration
 ###
 activate :deploy do |deploy|
