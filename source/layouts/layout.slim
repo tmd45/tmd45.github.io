@@ -37,5 +37,7 @@ html[lang="ja"]
     = yield
 
     /! Scripts
+    - if build?
+      = google_analytics_universal_tag
     script src="//code.jquery.com/jquery-2.1.1.min.js"
     = javascript_include_tag "components", "init"
