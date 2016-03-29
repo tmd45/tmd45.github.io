@@ -1,8 +1,8 @@
-# http://tmd45.jp/
+# https://tmd45.jp/
 
 [![Circle CI](https://circleci.com/gh/tmd45/tmd45.github.io/tree/source.svg?style=svg)](https://circleci.com/gh/tmd45/tmd45.github.io/tree/source) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tmd45/tmd45.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-http://tmd45.jp/ to http://tmd45.github.io/
+mirror https://tmd45.github.io/
 
 ## Setup
 
@@ -28,12 +28,12 @@ $ git checkout source
 Launch middleman server and live-reloading.
 
 ```
-$ middleman {server}
+$ middleman server
 ```
 
 ## Deploy
 
-:dart: trigger merge/commit to `source` branch for deploying by CircleCI.
+:dart: trigger merge/commit to `source` branch for deploying mirror by CircleCI.
 
 from local:
 
