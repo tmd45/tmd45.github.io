@@ -50,7 +50,7 @@ header
 main
   .container
     .row
-      .col.s12.m9.l10
+      .col.s12
         .section.scrollspy#profile
           h3 Profile
           == partial 'profile'
@@ -81,19 +81,6 @@ main
           
           h5.scrollspy#activity-2016 2016
           == partial 'activity2016'
-
-      .col.hide-on-small-only.m3.l2
-        .powered-wrapper
-          .powered
-            p.white-text
-              i.fa.fa-heart>
-              | Powered by
-              a.white-text<>[href="http://middlemanapp.com/"] Middleman
-              | on
-              a.white-text<[href="http://pages.github.com/"] GitHub Pages
-              | , and design with
-              a.white-text<[href="http://materializecss.com/"] Materialize
-              | . :)
 
 footer.page-footer
   .container.scrollspy#identification
