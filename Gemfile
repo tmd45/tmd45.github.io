@@ -8,11 +8,11 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Middleman Gems
-gem 'middleman', '~> 3.0'
-gem 'middleman-blog'
-gem 'middleman-deploy'
+gem 'middleman', '~> 4.1'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-google-analytics', '~> 2.1'
 gem 'middleman-livereload'
+gem 'middleman-sprockets', '~> 4.0.0.rc'
 
 gem 'slim', '~> 3.0.2'
 

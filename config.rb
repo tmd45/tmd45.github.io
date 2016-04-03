@@ -4,19 +4,6 @@ Time.zone = 'Tokyo'
 Slim::Engine.disable_option_validator!
 
 ###
-# Middleman Blog Setting
-###
-activate :blog do |blog|
-  blog.prefix = 'blog'
-  blog.sources = '{category}/{year}-{month}-{day}-{page}-{title}.html'
-  blog.permalink = '{category}/{year}/{month}/{day}/{page}.html'
-  blog.layout = 'blog'
-
-  blog.tag_template = 'blog/tags.html'
-  blog.calendar_template = 'blog/calendar.html'
-end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -101,7 +88,7 @@ end
 # Deploy-specific configuration
 ###
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   # User ページであるため 'master'
   deploy.branch = 'master'
   # Run Automatically
