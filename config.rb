@@ -88,7 +88,7 @@ end
 # Deploy-specific configuration
 ###
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   # User ページであるため 'master'
   deploy.branch = 'master'
   # Run Automatically
