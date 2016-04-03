@@ -9,7 +9,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Middleman Gems
 gem 'middleman', '~> 3.0'
-gem 'middleman-blog'
 gem 'middleman-deploy'
 gem 'middleman-google-analytics', '~> 2.1'
 gem 'middleman-livereload'
