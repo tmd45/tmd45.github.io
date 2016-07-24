@@ -27,8 +27,10 @@ html[lang="ja"]
     title
       = current_page.data.title || "tmd45.github.io"
     /! CSS
-    = stylesheet_link_tag "components", "style"
+    link[rel="stylesheet" href="//cdnjs.com/libraries/10up-sanitize.css"]
+    link[rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"]
     link[rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"]
+    = stylesheet_link_tag "style"
     /! HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
       script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
@@ -40,4 +42,5 @@ html[lang="ja"]
     - if build?
       = google_analytics_universal_tag
     script src="//code.jquery.com/jquery-2.1.1.min.js"
-    = javascript_include_tag "components", "init"
+    script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"
+    = javascript_include_tag "init"
