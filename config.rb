@@ -1,8 +1,3 @@
-Time.zone = 'Tokyo'
-
-# see https://github.com/middleman/middleman/issues/612
-Slim::Engine.disable_option_validator!
-
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -21,12 +16,17 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+config[:css_dir] = 'css'
+config[:js_dir] = 'js'
+
 ###
 # Helpers
 ###
 
 # Reload the browser automatically whenever files change
-activate :livereload
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -35,47 +35,7 @@ activate :livereload
 #   end
 # end
 
-###
-# Directory Setting
-###
-set :css_dir,    'css'
-set :js_dir,     'js'
-set :images_dir, 'images'
-set :fonts_dir,  'font'
-
-set :slim, { pretty: true, sort_attrs: false, format: :html }
-
-###
-# Build-specific configuration
-###
-configure :build do
-  activate :minify_css
-  activate :minify_javascript
-end
-
-###
-# Bower Components Support
-# see: http://qiita.com/osakanafish/items/f7866947e3c487eb9e70
-###
-after_configuration do
-  bowerrc = JSON.parse File.read(File.join "#{root}", '.bowerrc')
-  bower_dir = bowerrc['directory']
-  sprockets.append_path File.join("#{root}", bower_dir)
-
-  # For font files
-  Dir.glob(File.join("#{root}", bower_dir, '**/*', '{bower,component,.bower}.json')) do |f|
-    bower = JSON.parse(File.read(f), create_additions: false)
-    dirname = File.dirname(f)
-    case bower['main']
-    when String
-      sprockets.append_path File.dirname(File.join(dirname, bower['main']))
-    when Array
-      bower['main'].each do |name|
-        sprockets.append_path File.dirname(File.join(dirname, name))
-      end
-    end
-  end
-end
+# set :slim, { pretty: true, sort_attrs: false, format: :html }
 
 ###
 # Middleman Google Analytics

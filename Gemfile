@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
+ruby '2.3.1'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
@@ -12,11 +12,8 @@ gem 'middleman', '~> 4.1'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-google-analytics', '~> 2.1'
 gem 'middleman-livereload'
-gem 'middleman-sprockets', '~> 4.0.0.rc'
 
 gem 'slim', '~> 3.0.2'
 
 # for Heroku
 gem 'puma', '~> 2.11.3'
-
-gem 'nokogiri', '>= 1.6.7.2'
