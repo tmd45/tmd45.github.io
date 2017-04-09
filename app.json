@@ -1,6 +1,11 @@
 {
-    "name": "tmd45.github.io",
-    "env": {
-        "BUILDPACK_URL": "git://github.com/ddollar/heroku-buildpack-multi"
+  "name": "tmd45.github.io",
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "https://github.com/hashicorp/heroku-buildpack-middleman.git"
     }
+  ]
 }
