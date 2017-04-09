@@ -1,3 +1,19 @@
 {
-    "name": "tmd45.github.io"
+  "name": "tmd45.github.io",
+  "env": {
+    "NODE_MODULES_CACHE": {
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "https://github.com/hashicorp/heroku-buildpack-middleman.git"
+    }
+  ]
 }
