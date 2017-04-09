@@ -1,10 +1,5 @@
 {
   "name": "tmd45.github.io",
-  "env": {
-    "NODE_MODULES_CACHE": {
-      "required": true
-    }
-  },
   "buildpacks": [
     {
       "url": "heroku/ruby"
