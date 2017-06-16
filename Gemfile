@@ -16,4 +16,4 @@ gem 'middleman-livereload'
 gem 'slim', '~> 3.0.2'
 
 # for Heroku
-gem 'puma', '~> 2.11.3'
+gem 'puma', '~> 3.9.1'
