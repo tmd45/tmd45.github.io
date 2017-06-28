@@ -2,35 +2,7 @@
 title: tmd45.jp
 ---
 header
-  .container.hide-on-large-only.mobile-title
-    .row
-      .col.s12
-        a.button-collapse.top-nav.full[href="#" data-activates="mobile-slide-out"]
-          i.mdi-navigation-menu.medium
-        h1.right tmd45.jp
-  ul.side-nav.fixed#mobile-slide-out
-    li.logo.hide-on-med-and-down
-      .section
-        a[href="/"]
-          = image_tag('icon-tmd45-tw.jpg', class: 'circle responsive-img')
-          h1.logo-title tmd45.jp
-    li.social.waves-effect
-      .container
-        .row
-          .col.s4
-            a[href="http://github.com/tmd45"]
-              i.fa.fa-github.small
-          .col.s4
-            a[href="http://twitter.com/tmd45"]
-              i.fa.fa-twitter.small
-          .col.s4
-            a[href="http://instagram.com/tmd45"]
-              i.fa.fa-instagram.small
-    li.waves-effect: a[href="#profile"] Profile
-    li.waves-effect: a[href="http://blog.tmd45.jp"]
-      i.fa.fa-external-link.right
-      | Blog
-    li.waves-effect: a[href="#identification"] Identification
+  == partial 'header'
 main
   .container
     .row
@@ -40,9 +12,4 @@ main
           == partial 'profile'
 
 footer.page-footer
-  .container.scrollspy#identification
-    == partial 'identification'
-
-  .footer-copyright
-    .container
-      | &copy; 2009 tmd45.jp
+  == partial 'footer'
