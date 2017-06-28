@@ -30,22 +30,6 @@ header
     li.waves-effect: a[href="http://blog.tmd45.jp"]
       i.fa.fa-external-link.right
       | Blog
-    li.no-padding
-      ul.collapsible.collapsible-accordion
-        li
-          a.waves-effect.collapsible-header[href="#activity"]
-            i.fa.fa-angle-down.right
-            | Activity
-          .collapsible-body
-            ul
-              li.waves-effect: a[href="#activity-2009"] 2009
-              li.waves-effect: a[href="#activity-2010"] 2010
-              li.waves-effect: a[href="#activity-2011"] 2011
-              li.waves-effect: a[href="#activity-2012"] 2012
-              li.waves-effect: a[href="#activity-2013"] 2013
-              li.waves-effect: a[href="#activity-2014"] 2014
-              li.waves-effect: a[href="#activity-2015"] 2015
-              li.waves-effect: a[href="#activity-2016"] 2016
     li.waves-effect: a[href="#identification"] Identification
 main
   .container
@@ -54,33 +38,6 @@ main
         .section.scrollspy#profile
           h3 Profile
           == partial 'profile'
-
-        .section.scrollspy#activity
-          h3 Activity
-
-          h5.scrollspy#activity-2009 2009
-          == partial 'activity2009'
-          
-          h5.scrollspy#activity-2010 2010
-          == partial 'activity2010'
-          
-          h5.scrollspy#activity-2011 2011
-          == partial 'activity2011'
-          
-          h5.scrollspy#activity-2012 2012
-          == partial 'activity2012'
-          
-          h5.scrollspy#activity-2013 2013
-          == partial 'activity2013'
-          
-          h5.scrollspy#activity-2014 2014
-          == partial 'activity2014'
-          
-          h5.scrollspy#activity-2015 2015
-          == partial 'activity2015'
-          
-          h5.scrollspy#activity-2016 2016
-          == partial 'activity2016'
 
 footer.page-footer
   .container.scrollspy#identification
