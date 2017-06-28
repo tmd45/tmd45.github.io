@@ -2,51 +2,7 @@
 title: tmd45.jp
 ---
 header
-  .container.hide-on-large-only.mobile-title
-    .row
-      .col.s12
-        a.button-collapse.top-nav.full[href="#" data-activates="mobile-slide-out"]
-          i.mdi-navigation-menu.medium
-        h1.right tmd45.jp
-  ul.side-nav.fixed#mobile-slide-out
-    li.logo.hide-on-med-and-down
-      .section
-        a[href="/"]
-          = image_tag('icon-tmd45-tw.jpg', class: 'circle responsive-img')
-          h1.logo-title tmd45.jp
-    li.social.waves-effect
-      .container
-        .row
-          .col.s4
-            a[href="http://github.com/tmd45"]
-              i.fa.fa-github.small
-          .col.s4
-            a[href="http://twitter.com/tmd45"]
-              i.fa.fa-twitter.small
-          .col.s4
-            a[href="http://instagram.com/tmd45"]
-              i.fa.fa-instagram.small
-    li.waves-effect: a[href="#profile"] Profile
-    li.waves-effect: a[href="http://blog.tmd45.jp"]
-      i.fa.fa-external-link.right
-      | Blog
-    li.no-padding
-      ul.collapsible.collapsible-accordion
-        li
-          a.waves-effect.collapsible-header[href="#activity"]
-            i.fa.fa-angle-down.right
-            | Activity
-          .collapsible-body
-            ul
-              li.waves-effect: a[href="#activity-2009"] 2009
-              li.waves-effect: a[href="#activity-2010"] 2010
-              li.waves-effect: a[href="#activity-2011"] 2011
-              li.waves-effect: a[href="#activity-2012"] 2012
-              li.waves-effect: a[href="#activity-2013"] 2013
-              li.waves-effect: a[href="#activity-2014"] 2014
-              li.waves-effect: a[href="#activity-2015"] 2015
-              li.waves-effect: a[href="#activity-2016"] 2016
-    li.waves-effect: a[href="#identification"] Identification
+  == partial 'header'
 main
   .container
     .row
@@ -55,37 +11,5 @@ main
           h3 Profile
           == partial 'profile'
 
-        .section.scrollspy#activity
-          h3 Activity
-
-          h5.scrollspy#activity-2009 2009
-          == partial 'activity2009'
-          
-          h5.scrollspy#activity-2010 2010
-          == partial 'activity2010'
-          
-          h5.scrollspy#activity-2011 2011
-          == partial 'activity2011'
-          
-          h5.scrollspy#activity-2012 2012
-          == partial 'activity2012'
-          
-          h5.scrollspy#activity-2013 2013
-          == partial 'activity2013'
-          
-          h5.scrollspy#activity-2014 2014
-          == partial 'activity2014'
-          
-          h5.scrollspy#activity-2015 2015
-          == partial 'activity2015'
-          
-          h5.scrollspy#activity-2016 2016
-          == partial 'activity2016'
-
 footer.page-footer
-  .container.scrollspy#identification
-    == partial 'identification'
-
-  .footer-copyright
-    .container
-      | &copy; 2009 tmd45.jp
+  == partial 'footer'
