@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+    - 'config.ru'
+    - 'vendor/**/*'
+
+# コメントにASCII以外の文字コードを使用することを禁止 (default: true)
+Style/AsciiComments:
+  Enabled: false
