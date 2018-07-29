@@ -14,18 +14,14 @@ jobs:
       - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
         command: /sbin/init
     steps:
-      # Machine Setup
       - checkout
-      # Prepare for artifact and test results  collection equivalent to how it was done on 1.0.
-      # In many cases you can simplify this from what is generated here.
-      # 'See docs on artifact collection here https://circleci.com/docs/2.0/artifacts/'
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
-      # This is based on your 1.0 configuration file or project settings
       - run:
           working_directory: ~/tmd45/tmd45.github.io
           command: 'echo ''Asia/Tokyo'' | sudo tee -a /etc/timezone; sudo dpkg-reconfigure
             -f noninteractive tzdata; sudo service mysql restart; sudo service postgresql
             restart; '
+
       # Dependencies
       - restore_cache:
           keys:
@@ -60,8 +56,6 @@ jobs:
       # Test
       - run: bundle exec middleman build
 
-      # Deployment
-      # Teardown
       # Save test results
       - store_test_results:
           path: /tmp/circleci-test-results
