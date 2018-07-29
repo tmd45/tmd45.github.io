@@ -21,12 +21,12 @@ jobs:
       # Dependencies
       - restore_cache: &restore_cache
           keys:
-          # This branch if available
-          - v1-dep-{{ .Branch }}-
-          # Default branch if not
-          - v1-dep-source-
-          # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
-          - v1-dep-
+            # This branch if available
+            - v1-dep-{{ .Branch }}-
+            # Default branch if not
+            - v1-dep-source-
+            # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
+            - v1-dep-
 
       - run: ./script/bootstrap
       - run: echo -e "export RAILS_ENV=test\nexport RACK_ENV=test" >> $BASH_ENV
@@ -76,11 +76,11 @@ jobs:
           --jobs=4 --retry=3 '
       - save_cache: *save_cache
       - run:
-        name: bundle exec middlem deploy
-        command: |
-          git config --global user.name 'circleci'
-          git config --global user.email 'tmd45@otegami.jpn.org'
-          bundle exec middleman deploy
+          name: bundle exec middlem deploy
+          command: |
+            git config --global user.name 'circleci'
+            git config --global user.email 'tmd45@otegami.jpn.org'
+            bundle exec middleman deploy
 
 workflows:
   version: 2
@@ -88,5 +88,9 @@ workflows:
     jobs:
       - build
       - deploy:
-        requires:
-          - build
+          requires:
+            - build
+          filters:
+            branches:
+              only: source
+
