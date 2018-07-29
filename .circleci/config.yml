@@ -84,13 +84,9 @@ jobs:
 
 workflows:
   version: 2
-
-  commit:
+  build_and_deploy:
     jobs:
       - build
       - deploy:
         requires:
           - build
-        filters:
-          branches:
-            only: source
