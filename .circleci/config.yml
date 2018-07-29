@@ -6,12 +6,12 @@ jobs:
     parallelism: 1
     shell: /bin/bash --login
 
-    environment:
+    environment: &environment
       TZ: /usr/share/zoneinfo/Asia/Tokyo
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
 
-    docker:
+    docker: &docker
       - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
         command: /sbin/init
     steps:
@@ -19,7 +19,7 @@ jobs:
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
 
       # Dependencies
-      - restore_cache:
+      - restore_cache: &restore_cache
           keys:
           # This branch if available
           - v1-dep-{{ .Branch }}-
@@ -34,7 +34,7 @@ jobs:
           --jobs=4 --retry=3 '
 
       # Save dependency cache
-      - save_cache:
+      - save_cache: &save_cache
           key: v1-dep-{{ .Branch }}-{{ epoch }}
           paths:
           # This is a broad list of cache paths to include many possible development environments
@@ -58,8 +58,29 @@ jobs:
       # Save artifacts
       - store_artifacts:
           path: /tmp/circleci-artifacts
-      - store_artifacts:
-          path: /tmp/circleci-test-results
+
+  deploy:
+    working_directory: ~/tmd45/tmd45.github.io
+    parallelism: 1
+    shell: /bin/bash --login
+
+    environment: *environment
+    docker: *docker
+
+    steps:
+      - checkout
+      - restore_cache: *restore_cache
+      - run: ./script/bootstrap
+      - run: echo -e "export RAILS_ENV=test\nexport RACK_ENV=test" >> $BASH_ENV
+      - run: 'bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
+          --jobs=4 --retry=3 '
+      - save_cache: *save_cache
+      - run:
+        name: bundle exec middlem deploy
+        command: |
+          git config --global user.name 'circleci'
+          git config --global user.email 'tmd45@otegami.jpn.org'
+          bundle exec middleman deploy
 
 workflows:
   version: 2
@@ -67,3 +88,9 @@ workflows:
   commit:
     jobs:
       - build
+      - deploy:
+        requires:
+          - build
+        filters:
+          branches:
+            only: source
