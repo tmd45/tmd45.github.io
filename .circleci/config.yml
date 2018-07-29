@@ -75,8 +75,9 @@ jobs:
       - run: 'bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
           --jobs=4 --retry=3 '
       - save_cache: *save_cache
+      - run: bundle exec middleman build
       - run:
-          name: bundle exec middlem deploy
+          name: bundle exec middleman deploy
           command: |
             git config --global user.name 'circleci'
             git config --global user.email 'tmd45@otegami.jpn.org'
