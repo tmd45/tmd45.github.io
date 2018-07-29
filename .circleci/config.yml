@@ -65,3 +65,9 @@ jobs:
       - store_artifacts:
           path: /tmp/circleci-test-results
 
+workflows:
+  version: 2
+
+  commit:
+    jobs:
+      - build
