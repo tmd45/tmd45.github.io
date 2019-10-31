@@ -13,10 +13,10 @@ jobs:
 
     docker: &docker
       - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
-        command: /sbin/init
     steps:
       - checkout
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
+      - run: gem install bundler:2.0.2
 
       # Dependencies
       - restore_cache: &restore_cache
