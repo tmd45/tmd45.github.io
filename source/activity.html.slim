@@ -11,6 +11,7 @@ main
           h3 Activity
 
           .btn-group
+            a.waves-effect.btn-flat[href="#activity-2020"] 2020
             a.waves-effect.btn-flat[href="#activity-2019"] 2019
             a.waves-effect.btn-flat[href="#activity-2018"] 2018
             a.waves-effect.btn-flat[href="#activity-2017"] 2017
@@ -22,6 +23,9 @@ main
             a.waves-effect.btn-flat[href="#activity-2011"] 2011
             a.waves-effect.btn-flat[href="#activity-2010"] 2010
             a.waves-effect.btn-flat[href="#activity-2009"] 2009
+
+          h5.scrollspy#activity-2020 2020
+          == partial 'activity2020'
 
           h5.scrollspy#activity-2019 2019
           == partial 'activity2019'
