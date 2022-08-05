@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* Custom Stylesheet */
+/* fix import conpornent
+-------------------------------------------------------- */
+i.fa {
+  line-height: inherit; }
+
+/* 参考: 色彩センスのいらない配色講座
+http://www.slideshare.net/marippe/ss-9003317
+base: 70%, main: 25%, accent: 5% */
+/* http://www.materialpalette.com/deep-purple/lime */
+body {
+  background: #fcfcfc;
+  font-size: 15px; }
+
+body * {
+  font-family: "游ゴシック","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","MS ゴシック",sans-serif;
+  font-weight: normal; }
+
+header,
+main,
+footer {
+  padding-left: 240px; }
+
+h1, h2, h3, h4, h5, h6,
+p, a, i {
+  /* スムージングで文字が太くなるのを無くしたい */
+  -webkit-font-smoothing: antialiased; }
+
+/* for side-nav */
+ul.side-nav.fixed {
+  overflow: auto; }
+  ul.side-nav.fixed li.logo {
+    margin: 0;
+    padding: 0;
+    background: #673ab7;
+    border-bottom: 1px solid #b6b6b6; }
+    ul.side-nav.fixed li.logo :hover {
+      background: #784bc8; }
+    ul.side-nav.fixed li.logo .section {
+      height: 270px;
+      padding: 1.3rem 1rem; }
+    ul.side-nav.fixed li.logo a {
+      display: block;
+      text-align: center; }
+      ul.side-nav.fixed li.logo a :hover {
+        background: transparent; }
+    ul.side-nav.fixed li.logo h1.logo-title {
+      margin: 0;
+      padding: 0;
+      margin-top: -1.7rem;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff; }
+  ul.side-nav.fixed li {
+    display: block;
+    line-height: 62px; }
+    ul.side-nav.fixed li a {
+      line-height: 62px;
+      height: 62px; }
+    ul.side-nav.fixed li ul li a i {
+      margin-right: 0;
+      width: inherit; }
+
+.social .container {
+  width: 100%; }
+
+.social .row {
+  padding: 13px 0;
+  margin-bottom: 0; }
+
+.social .col {
+  text-align: center; }
+
+.social a {
+  padding: 0 !important; }
+  .social a :hover {
+    color: #ffffff !important; }
+
+header {
+  border-top: 5px solid #512da8; }
+
+main .section {
+  margin-bottom: 32px; }
+  main .section a:hover {
+    text-decoration: underline; }
+  main .section h3 {
+    color: #673ab7;
+    margin-bottom: 3.8rem;
+    font-weight: bold; }
+  main .section h5 {
+    margin-top: 1.8rem; }
+  main .section dl, main .section ul {
+    padding-left: 0.8rem; }
+    main .section dl dt, main .section ul dt {
+      font-weight: bold;
+      margin-top: 0.7rem; }
+    main .section dl dd, main .section dl li, main .section ul dd, main .section ul li {
+      margin-left: 0.8rem; }
+  main .section dl.self-activity dt {
+    color: #727272; }
+
+main .profile-images {
+  width: 100%;
+  padding: 0; }
+  main .profile-images .col {
+    padding: 1rem 0.4rem; }
+
+main .powered-wrapper {
+  margin-top: 120px; }
+  main .powered-wrapper .powered {
+    background: #cddc39;
+    max-width: 150px;
+    padding: 1.7rem;
+    font-size: 85%; }
+    main .powered-wrapper .powered a {
+      font-weight: bold; }
+    main .powered-wrapper .powered a:hover {
+      text-decoration: underline; }
+
+footer.page-footer {
+  background: #673ab7; }
+
+.page-footer h5, .page-footer p, .page-footer a {
+  color: #ffffff; }
+
+.page-footer a:hover {
+  border-bottom: 1px dashed #ffffff; }
+
+/* for PC
+-------------------------------------------------------- */
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 90%; } }
+
+/* for mobile
+ -------------------------------------------------------- */
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0; } }
+
+.mobile-title {
+  width: 100%;
+  background: #673ab7; }
+  .mobile-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 0.75em; }
+
+a.button-collapse.top-nav {
+  position: absolute;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  float: none;
+  margin-left: 1.5rem;
+  color: #cddc39;
+  font-size: 32px;
+  z-index: 2; }
+
+a.button-collapse.top-nav.full {
+  line-height: 122px; }
