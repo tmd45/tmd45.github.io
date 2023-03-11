@@ -1,106 +1,41 @@
-version: 2
+version: 2.1
+
+orbs:
+  # see. https://github.com/sue445/circleci-ruby-orbs/releases
+  ruby-orbs: sue445/ruby-orbs@1.6.2
+
+executors:
+  ruby:
+    docker:
+      - image: circleci/ruby
 
 jobs:
   build:
-    working_directory: ~/tmd45/tmd45.github.io
-    parallelism: 1
-    shell: /bin/bash --login
-
-    environment: &environment
-      TZ: /usr/share/zoneinfo/Asia/Tokyo
-      CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
-      CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
-
-    docker: &docker
-      - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
+    executor: ruby
+    working_directory: ~/tmd45.github.io
     steps:
       - checkout
-      - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
-      - run: gem install bundler:2.0.2
-
-      # Dependencies
-      - restore_cache: &restore_cache
-          keys:
-            # This branch if available
-            - v1-dep-{{ .Branch }}-
-            # Default branch if not
-            - v1-dep-source-
-            # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
-            - v1-dep-
-
-      - run: ./script/bootstrap
-      - run: echo -e "export RAILS_ENV=test\nexport RACK_ENV=test" >> $BASH_ENV
-      - run: 'bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
-          --jobs=4 --retry=3 '
-
-      # Save dependency cache
-      - save_cache: &save_cache
-          key: v1-dep-{{ .Branch }}-{{ epoch }}
-          paths:
-          # This is a broad list of cache paths to include many possible development environments
-          # You can probably delete some of these entries
-          - vendor/bundle
-          - ~/virtualenvs
-          - ~/.m2
-          - ~/.ivy2
-          - ~/.bundle
-          - ~/.go_workspace
-          - ~/.gradle
-          - ~/.cache/bower
-
+      - ruby-orbs/bundle-install
       # Compile
-      # Test
+      # test as build
       - run: bundle exec middleman build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
 
-      # Save test results
-      - store_test_results:
-          path: /tmp/circleci-test-results
-      # Save artifacts
-      - store_artifacts:
-          path: /tmp/circleci-artifacts
-
-  deploy:
-    working_directory: ~/tmd45/tmd45.github.io
-    parallelism: 1
-    shell: /bin/bash --login
-
-    environment: *environment
-    docker: *docker
-
+  test:
+    executor: ruby
+    working_directory: ~/tmd45.github.io
     steps:
-      - checkout
-      - run: gem install bundler:2.0.2
-      - restore_cache: *restore_cache
-      - run: ./script/bootstrap
-      - run: echo -e "export RAILS_ENV=test\nexport RACK_ENV=test" >> $BASH_ENV
-      - run: 'bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
-          --jobs=4 --retry=3 '
-      - save_cache: *save_cache
-      - run: bundle exec middleman build
-      - run:
-          name: copy .circleci/config.yml to build
-          command: |
-            mkdir build/.circleci
-            cp .circleci/config.yml build/.circleci
-      - run:
-          name: bundle exec middleman deploy
-          command: |
-            git config --global user.name 'circleci'
-            git config --global user.email 'tmd45@otegami.jpn.org'
-            bundle exec middleman deploy
+      - attach_workspace:
+          at: .
+      - run: echo 'dummy'
 
 workflows:
-  version: 2
-  build_and_deploy:
+  tests:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore: master
-      - deploy:
+      - build
+      - test:
           requires:
-            - build
-          filters:
-            branches:
-              only: source
-
+            - setup
