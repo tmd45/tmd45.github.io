@@ -11,6 +11,7 @@ import {
 } from "@mui/material"
 
 import { Link } from "../components/Link"
+import MenuSocialLink from "../components/MenuSocialLink"
 
 const WIDTH = 256 // px
 
@@ -53,9 +54,11 @@ const MenuListItem: React.FC<{
         selected={selected}
         noExternalIcon={false}
         sx={{
-          paddingLeft: "16px",
+          paddingLeft: "32px",
+          paddingRight: "32px",
           "&.Mui-selected": {
-            paddingLeft: "14px",
+            paddingLeft: "34px",
+            paddingRight: "34px",
             borderLeft: `solid 2px ${theme.palette.primary.main}`,
             color: theme.palette.primary.main,
             "& svg": {
@@ -94,6 +97,7 @@ export default function SideMenu() {
     >
       <>
         <List>
+          <MenuSocialLink />
           {MENU_ITEMS.map((item) => (
             <MenuListItem
               key={item.name}

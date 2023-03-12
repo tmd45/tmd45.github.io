@@ -1,34 +1,33 @@
 import * as React from "react"
-import { Container, Grid, Stack, Box, Typography } from "@mui/material"
-import { MuiNextLink } from "../components/MuiNextLink"
-import ProTip from "../components/ProTip"
-import Copyright from "../components/Copyright"
+import { Container, Stack, Box } from "@mui/material"
 import SideMenu from "../components/SideMenu"
 
-export default function Layout() {
+interface Props {
+  readonly children: React.ReactNode
+}
+
+export const Layout: React.FC<Props> = ({ children }) => {
   return (
     <Container maxWidth="lg">
       <Stack direction="row">
         <SideMenu />
+        <Box
+          sx={{
+            width: "100%",
+            padding: "32px",
+          }}
+        >
+          <Container
+            maxWidth={false}
+            disableGutters
+            sx={{
+              maxWidth: "1080px",
+            }}
+          >
+            {children}
+          </Container>
+        </Box>
       </Stack>
-      <Box
-        sx={{
-          my: 4,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography variant="h4" component="h1" gutterBottom>
-          Material UI - Next.js example in TypeScript
-        </Typography>
-        <MuiNextLink href="/about" color="secondary">
-          Go to the about page
-        </MuiNextLink>
-        <ProTip />
-        <Copyright />
-      </Box>
     </Container>
   )
 }

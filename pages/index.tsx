@@ -1,6 +1,6 @@
 import * as React from "react"
-import Layout from "../components/Layout"
+import Typography from "@mui/material/Typography"
 
 export default function IndexPage() {
-  return <Layout />
+  return <Typography>Hello, hello</Typography>
 }
