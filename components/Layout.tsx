@@ -1,15 +1,16 @@
 import * as React from "react"
-import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
-import Box from "@mui/material/Box"
-import Button from "@mui/material/Button"
+import { Container, Grid, Stack, Box, Typography } from "@mui/material"
 import { MuiNextLink } from "../components/MuiNextLink"
 import ProTip from "../components/ProTip"
 import Copyright from "../components/Copyright"
+import SideMenu from "../components/SideMenu"
 
-export default function About() {
+export default function Layout() {
   return (
     <Container maxWidth="lg">
+      <Stack direction="row">
+        <SideMenu />
+      </Stack>
       <Box
         sx={{
           my: 4,
@@ -22,16 +23,9 @@ export default function About() {
         <Typography variant="h4" component="h1" gutterBottom>
           Material UI - Next.js example in TypeScript
         </Typography>
-        <Box maxWidth="sm">
-          <Button
-            variant="contained"
-            component={MuiNextLink}
-            noLinkStyle
-            href="/"
-          >
-            Go to the home page
-          </Button>
-        </Box>
+        <MuiNextLink href="/about" color="secondary">
+          Go to the about page
+        </MuiNextLink>
         <ProTip />
         <Copyright />
       </Box>
