@@ -1,6 +1,12 @@
 {
   "name": "tmd45.github.io",
   "packageManager": "yarn@3.4.1",
+  "scripts": {
+    "dev": "next dev",
+    "lint": "next lint",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
