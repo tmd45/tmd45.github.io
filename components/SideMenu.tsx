@@ -90,7 +90,7 @@ export default function SideMenu() {
         "& .MuiDrawer-paper": {
           width: `${WIDTH}px`,
           background: theme.palette.background.default,
-          borderRight: `1px solid ${alpha(theme.palette.divider, 0.12)}`,
+          borderRight: `1px solid ${alpha(theme.palette.divider, 0.4)}`,
         },
       }}
       open
