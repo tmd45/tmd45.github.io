@@ -11,6 +11,7 @@ import {
 } from "@mui/material"
 
 import { Link } from "../components/Link"
+import MenuTitle from "./SideMenuTitle"
 import MenuSocialLink from "../components/MenuSocialLink"
 
 const WIDTH = 256 // px
@@ -90,13 +91,13 @@ export default function SideMenu() {
           width: `${WIDTH}px`,
           background: theme.palette.background.default,
           borderRight: `1px solid ${alpha(theme.palette.divider, 0.12)}`,
-          padding: "8px 0",
         },
       }}
       open
     >
       <>
-        <List>
+        <List disablePadding>
+          <MenuTitle />
           <MenuSocialLink />
           {MENU_ITEMS.map((item) => (
             <MenuListItem
