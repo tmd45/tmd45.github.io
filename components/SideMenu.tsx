@@ -8,13 +8,17 @@ import {
   ListItemBaseProps,
   ListItemButton,
   ListItemText,
+  IconButton,
+  Fab,
 } from "@mui/material"
 
 import { Link } from "../components/Link"
 import MenuTitle from "./SideMenuTitle"
 import MenuSocialLink from "../components/MenuSocialLink"
 
-const WIDTH = 256 // px
+import MenuRoundedIcon from "@mui/icons-material/Menu"
+
+const drawerWidth = 256 // px
 
 interface SideMenuItem {
   readonly name: string
@@ -75,39 +79,91 @@ const MenuListItem: React.FC<{
 }
 
 export default function SideMenu() {
+  const [mobileOpen, setMobileOpen] = React.useState(false)
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen)
+  }
+
   const selectedItemName =
     [...MENU_ITEMS].find((item) => {
       return item.url
     })?.name ?? "Profile"
 
+  const drawer = (
+    <>
+      <List disablePadding>
+        <MenuTitle />
+        <MenuSocialLink />
+        {MENU_ITEMS.map((item) => (
+          <MenuListItem
+            key={item.name}
+            item={item}
+            selected={selectedItemName === "Activity"}
+          />
+        ))}
+      </List>
+    </>
+  )
+
   const theme = useTheme()
 
   return (
-    <Drawer
-      variant="permanent"
-      sx={{
-        width: `${WIDTH}px`,
-        "& .MuiDrawer-paper": {
-          width: `${WIDTH}px`,
-          background: theme.palette.background.default,
-          borderRight: `1px solid ${alpha(theme.palette.divider, 0.4)}`,
-        },
-      }}
-      open
-    >
-      <>
-        <List disablePadding>
-          <MenuTitle />
-          <MenuSocialLink />
-          {MENU_ITEMS.map((item) => (
-            <MenuListItem
-              key={item.name}
-              item={item}
-              selected={selectedItemName === "Activity"}
-            />
-          ))}
-        </List>
-      </>
-    </Drawer>
+    <>
+      <Fab
+        color="primary"
+        aria-label="open drawer"
+        // edge="start"
+        onClick={handleDrawerToggle}
+        sx={{
+          mr: 2,
+          display: { sm: "none" },
+          position: "absolute",
+          bottom: 16,
+          left: 16,
+        }}
+      >
+        <MenuRoundedIcon />
+      </Fab>
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        sx={{
+          width: drawerWidth,
+          display: { xs: "block", sm: "none" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: drawerWidth,
+            background: theme.palette.background.default,
+            borderRight: "none",
+          },
+        }}
+      >
+        {/* View in mobile */}
+        {drawer}
+      </Drawer>
+      <Drawer
+        variant="permanent"
+        open
+        sx={{
+          width: drawerWidth,
+          display: { xs: "none", sm: "block" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: drawerWidth,
+            background: theme.palette.background.default,
+            borderRight: "none",
+            boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+          },
+        }}
+      >
+        {/* View in desktop */}
+        {drawer}
+      </Drawer>
+    </>
   )
 }
