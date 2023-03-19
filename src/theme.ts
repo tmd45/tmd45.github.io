@@ -1,9 +1,18 @@
-import { Roboto } from 'next/font/google';
+import { Roboto, Noto_Sans_JP } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
+import { palette } from '@mui/system';
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
+
+export const notoSansJp = Noto_Sans_JP({
+  preload: false,
+  weight: ['300', '400', '500', '700'],
+  // subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
@@ -31,7 +40,7 @@ const theme = createTheme({
     divider: '#BDBDBD',
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: notoSansJp.style.fontFamily,
     h3: { fontWeight: 500 },
     h6: { fontSize: '1rem', fontWeight: 500 },
     subtitle1: { fontWeight: 500 },
