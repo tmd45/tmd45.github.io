@@ -8,7 +8,6 @@ import {
   ListItemBaseProps,
   ListItemButton,
   ListItemText,
-  IconButton,
   Fab,
 } from "@mui/material"
 
@@ -110,6 +109,7 @@ export default function SideMenu() {
 
   return (
     <>
+      {/* Fab: Floating Action Button */}
       <Fab
         color="primary"
         aria-label="open drawer"
@@ -118,8 +118,8 @@ export default function SideMenu() {
         sx={{
           mr: 2,
           display: { sm: "none" },
-          position: "absolute",
-          bottom: 16,
+          position: "fixed",
+          bottom: 32,
           left: 16,
         }}
       >
