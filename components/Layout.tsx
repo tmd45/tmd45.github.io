@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Container, Stack, Box } from "@mui/material"
+import { Container, Stack, Box, useTheme } from "@mui/material"
 import SideMenu from "../components/SideMenu"
 
 interface Props {
@@ -7,8 +7,15 @@ interface Props {
 }
 
 export const Layout: React.FC<Props> = ({ children }) => {
+  const theme = useTheme()
+
   return (
-    <Container maxWidth="lg">
+    <Container
+      maxWidth="xl"
+      sx={{
+        borderTop: `5px solid ${theme.palette.primary.dark}`,
+      }}
+    >
       <Stack direction="row">
         <SideMenu />
         <Box
