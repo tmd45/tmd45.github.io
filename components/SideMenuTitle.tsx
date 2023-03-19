@@ -41,7 +41,7 @@ export default function MenuTitle() {
           >
             <Avatar
               alt="tmd45.jp"
-              src="/assets/icon_tmd45_tw2013.jpg"
+              src="/assets/tmd45_tw.jpg"
               sx={{
                 width: 180,
                 height: 180,

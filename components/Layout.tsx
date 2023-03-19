@@ -24,13 +24,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
             padding: "32px",
           }}
         >
-          <Container
-            maxWidth={false}
-            disableGutters
-            sx={{
-              maxWidth: "1080px",
-            }}
-          >
+          <Container maxWidth="md" disableGutters>
             {children}
           </Container>
         </Box>

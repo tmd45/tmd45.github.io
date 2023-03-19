@@ -1,9 +1,16 @@
 import * as React from "react"
-import { Avatar, Box, Typography, AvatarGroup, useTheme } from "@mui/material"
-import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded"
-import AlternateEmailRoundedIcon from "@mui/icons-material/AlternateEmailRounded"
-import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded"
+import {
+  Avatar,
+  Box,
+  Link,
+  Typography,
+  AvatarGroup,
+  useTheme,
+} from "@mui/material"
 import Copyright from "../components/Copyright"
+
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded"
+import HomeWorkRoundedIcon from "@mui/icons-material/HomeWorkRounded"
 
 export default function IndexPage() {
   const theme = useTheme()
@@ -21,21 +28,28 @@ export default function IndexPage() {
         Profile
       </Typography>
       <Typography variant="h4" gutterBottom>
-        Yoko TAMADA, @tmd45
+        TAMADA Yoko, @tmd45
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
-        I&apos;m a web application developer in Tokyo, Japan.
+        散財部風紀取り乱し委員わいわい係
       </Typography>
-      <Typography variant="body1" pb="1rem" gutterBottom>
-        Interested in web application development, user experience, and UI
-        design. I{" "}
-        <FavoriteBorderRoundedIcon
+      <Typography variant="body1" pb="0.5rem" gutterBottom>
+        一応 Web
+        アプリケーション開発者ですが最近はメールとドキュメントばっかり書いてます。
+        <br />
+        職業エンジニア歴15年,{" "}
+        <HomeWorkRoundedIcon
           fontSize="inherit"
+          color="primary"
           sx={{
             verticalAlign: "-3px",
           }}
         />{" "}
-        so many more interesting things.
+        WFH, えいえんの消費者, 本業は
+        <Link href="https://jp.finalfantasyxiv.com/">光の戦士</Link>
+      </Typography>
+      <Typography variant="body1" pb="1rem" gutterBottom>
+        ゲーム・サブカル活動時の名前は @tania45, たーにゃ45
       </Typography>
 
       <Box
@@ -45,102 +59,122 @@ export default function IndexPage() {
           justifyContent: "left",
         }}
       >
-        <AvatarGroup max={5}>
+        <AvatarGroup max={6}>
           <Avatar
             alt="Icon tmd45 2015"
-            src="/assets/tmd45_logo_2015.png"
+            src="/assets/tmd45_2015.png"
             sx={{ width: 64, height: 64 }}
           />
           <Avatar
             alt="Icon tmd45 tw2"
-            src="/assets/tmd45_logo_tw2.png"
+            src="/assets/tmd45_tw2.png"
             sx={{ width: 64, height: 64 }}
           />
           <Avatar
             alt="Icon tmd45 fb"
-            src="/assets/tmd45_logo_fb.png"
-            sx={{ width: 64, height: 64 }}
+            src="/assets/tmd45_fb.png"
+            sx={{ width: 64, height: 64, display: { xs: "none", sm: "block" } }}
           />
           <Avatar
             alt="Icon tmd45 fb2"
-            src="/assets/tmd45_logo_fb2.jpg"
+            src="/assets/tmd45_fb2.jpg"
+            sx={{ width: 64, height: 64, display: { xs: "none", sm: "block" } }}
+          />
+          <Avatar
+            alt="Icon tania ffxiv 7thanv"
+            src="/assets/tania45_ffxiv_7thanv.png"
             sx={{ width: 64, height: 64 }}
           />
           <Avatar
-            alt="Icon tania ffxiv 7thaniv"
-            src="/assets/tania_ffxiv_7thanv.png"
+            alt="Icon tania ffxiv 7thanv"
+            src="/assets/tania45_youtube.png"
             sx={{ width: 64, height: 64 }}
           />
         </AvatarGroup>
       </Box>
 
       <Typography variant="h5" pb="0.5rem" gutterBottom>
-        Experience
+        Links
       </Typography>
-
-      <Typography variant="h6" pl="0.5rem" gutterBottom>
-        Programming
-      </Typography>
-      <Typography variant="body2" pb="1rem" pl="1rem" gutterBottom>
-        Ruby <small>(Job and Hobby use)</small> / JavaScript and TypeScript{" "}
-        <small>(a little)</small> / Java <small>(long ago)</small> / PHP{" "}
-        <small>(long ago and a little)</small> / HTML + CSS / Sass / Markdown
-      </Typography>
-
-      <Typography variant="h6" pl="0.5rem" gutterBottom>
-        Frameworks
-      </Typography>
-      <Typography variant="body2" pb="1rem" pl="1rem" gutterBottom>
-        Ruby on Rails <small>(Job and Hobby use)</small> / React{" "}
-        <small>(a little)</small> / Next.js <small>(a little)</small> /
-        Docusaurus / Padrino <small>(a little)</small> / Struts{" "}
-        <small>(Java, long ago)</small> / Hibernate <small>(long ago)</small>
-      </Typography>
-
-      <Typography variant="h6" pl="0.5rem" gutterBottom>
-        Systems
-      </Typography>
-      <Typography variant="body2" pb="1rem" pl="1rem" gutterBottom>
-        OS X / Cent OS / Solaris <small>(long ago)</small> / nginx{" "}
-        <small>(a little)</small>
-      </Typography>
-
-      <Typography variant="h6" pl="0.5rem" gutterBottom>
-        Tools
-      </Typography>
-      <Typography variant="body2" pb="1rem" pl="1rem" gutterBottom>
-        VS Code / Vim / Eclipse <small>(long ago)</small> / Git / GitHub / Slack
-        / Eclipse<small>(long ago)</small>
-      </Typography>
-
-      <Typography variant="h6" pl="0.5rem" gutterBottom>
-        Others
-      </Typography>
-      <Typography variant="body2" pb="1rem" pl="1rem" gutterBottom>
-        OAuth and OpenID Connect <small>(acquiring now)</small>
+      <Typography variant="body1" pb="1rem" pl="0.5rem" gutterBottom>
+        <Link href="https://blog.betaful.life">Blog</Link>
+        <br />
+        <Link href="https://github.com/tmd45">GitHub</Link>
+        <br />
+        <Link href="https://zenn.dev/tmd45">Zenn</Link>
+        <br />
+        <Link href="https://speakerdeck.com/tmd45">Speaker Deck</Link>
       </Typography>
 
       <Typography variant="h5" pb="0.5rem" gutterBottom>
-        Hobby
+        Social
+      </Typography>
+      <Typography variant="body1" pb="0.5rem" pl="0.5rem" gutterBottom>
+        <Link href="https://misskey.betaful.life/@tmd45">
+          @tmd45@misskey.betaful.life
+        </Link>{" "}
+        <small style={{ color: theme.palette.text.disabled }}>
+          お一人鯖, メイン
+        </small>
+        <br />
+        <Link href="https://misskey.systems/@tmd45">
+          @tmd45@misskey.systems
+        </Link>{" "}
+        <small style={{ color: theme.palette.text.disabled }}>
+          ITコミュニティ
+        </small>
+        <br />
+        <Link href="https://misskey.gamelore.fun/@tania45">
+          @tania45@misskey.gamelore.fun
+        </Link>{" "}
+        <small style={{ color: theme.palette.text.disabled }}>ゲーム垢</small>
+        <br />
+        <Link href="https://misskey.io/@tmd45">@tmd45@misskey.io</Link>{" "}
+        <small style={{ color: theme.palette.text.disabled }}>ROM専</small>
+      </Typography>
+
+      <Typography variant="h6" pb="0.5rem" gutterBottom>
+        Podcast / Game
       </Typography>
       <Typography variant="body1" pb="1rem" pl="0.5rem" gutterBottom>
-        Most favorite is Final Fantasy XIV (MMORPG).
+        <Link href="https://www.youtube.com/@soramame_talk">
+          YouTube『そらまめの空話』
+        </Link>{" "}
+        <small style={{ color: theme.palette.text.disabled }}>
+          ほぼ毎週更新
+        </small>
         <br />
-        I&apos;m playing WhiteMage since 2013. And I like to play various games.
+        <Link href="https://www.youtube.com/@tania45jp">
+          YouTube ゲーム配信
+        </Link>{" "}
+        <small style={{ color: theme.palette.text.disabled }}>
+          ごくまれにやっています
+        </small>
+        <br />
+        <Link href="https://steamcommunity.com/id/tania_45">Steam</Link>
+        <br />
+        <Link href="https://www.twitch.tv/tmd45">Twitch</Link>
+      </Typography>
+
+      <Typography variant="h6" pb="0.5rem" gutterBottom>
+        Non active
+      </Typography>
+      <Typography variant="body1" pb="1rem" pl="0.5rem" gutterBottom>
+        <Link href="https://misskey.io/@tmd45">@tmd45@mstdn.jp</Link>
+        <br />
+        <Link href="https://twitter.com/tmd45">Twitter @tmd45</Link>
+        <br />
+        <Link href="https://twitter.com/tania45jp">Twitter @tania45jp</Link>
+        <br />
+        <Link href="https://facebook.com/tmd45">Facebook</Link>
+        <br />
+        <Link href="https://qiita.com/tmd45">Qiita</Link>
       </Typography>
 
       <Typography variant="h5" pb="0.5rem" gutterBottom>
         Contact
       </Typography>
       <Typography variant="body1" pb="1rem" pl="0.5rem" gutterBottom>
-        <AlternateEmailRoundedIcon
-          fontSize="small"
-          sx={{
-            verticalAlign: "-4px",
-          }}
-        />{" "}
-        tmd45
-        <br />
         <MailOutlineRoundedIcon
           fontSize="small"
           sx={{
