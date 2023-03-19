@@ -157,7 +157,7 @@ export default function SideMenu() {
             width: drawerWidth,
             background: theme.palette.background.default,
             borderRight: "none",
-            boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+            boxShadow: "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset",
           },
         }}
       >
