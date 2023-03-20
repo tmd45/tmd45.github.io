@@ -38,7 +38,7 @@ export default function IndexPage() {
         一応 Web
         アプリケーション開発者ですが最近はメールとドキュメントばっかり書いてます。
         <br />
-        職業エンジニア歴15年,{" "}
+        職業エンジニア歴{new Date().getFullYear() - 2007}年、
         <HomeWorkRoundedIcon
           fontSize="inherit"
           color="primary"
@@ -46,11 +46,8 @@ export default function IndexPage() {
             verticalAlign: "-3px",
           }}
         />{" "}
-        WFH, えいえんの消費者, 本業は
+        WFH、えいえんの消費者、愛猫、パニック/広場恐怖症、本業は
         <Link href="https://jp.finalfantasyxiv.com/">光の戦士</Link>
-      </Typography>
-      <Typography variant="body1" pb="1rem" gutterBottom>
-        ゲーム・サブカル活動時の名前は @tania45, たーにゃ45
       </Typography>
 
       <Box
@@ -76,11 +73,11 @@ export default function IndexPage() {
             src="/assets/tmd45_fb.png"
             sx={{ width: 64, height: 64, display: { xs: "none", sm: "block" } }}
           />
-          <Avatar
+          {/* <Avatar
             alt="Icon tmd45 fb2"
             src="/assets/tmd45_fb2.jpg"
             sx={{ width: 64, height: 64, display: { xs: "none", sm: "block" } }}
-          />
+          /> */}
           <Avatar
             alt="Icon tania ffxiv 7thanv"
             src="/assets/tania45_ffxiv_7thanv.png"
@@ -93,6 +90,23 @@ export default function IndexPage() {
           />
         </AvatarGroup>
       </Box>
+
+      <Typography variant="h5" pb="0.5rem" gutterBottom>
+        Hobby
+      </Typography>
+      <Typography variant="body1" pb="0.5rem" pl="0.5rem" gutterBottom>
+        ゲーム・サブカル活動時の名前は @tania45、たーにゃ45
+      </Typography>
+      <Typography variant="body1" pb="1rem" pl="0.5rem" gutterBottom>
+        ゲーム（FFXIV, Steam, Nintendo Switch）
+        <small style={{ color: theme.palette.text.disabled }}>
+          FFXIV は 2013 年 新生β からプレイ中のエンジョイヒーラー
+        </small>
+        <br />
+        漫画読書、文房具（万年筆インク, はんこ）
+        <br />
+        ガジェット（Oura Ring, Steam Deck, オタマトーン, 電子リコーダー）
+      </Typography>
 
       <Typography variant="h5" pb="0.5rem" gutterBottom>
         Links
@@ -161,13 +175,15 @@ export default function IndexPage() {
         Non active
       </Typography>
       <Typography variant="body1" pb="1rem" pl="0.5rem" gutterBottom>
+        <Link href="https://www.instagram.com/tmd45/">Instagram</Link>
+        <br />
+        <Link href="https://facebook.com/tmd45">Facebook</Link>
+        <br />
         <Link href="https://misskey.io/@tmd45">@tmd45@mstdn.jp</Link>
         <br />
         <Link href="https://twitter.com/tmd45">Twitter @tmd45</Link>
         <br />
         <Link href="https://twitter.com/tania45jp">Twitter @tania45jp</Link>
-        <br />
-        <Link href="https://facebook.com/tmd45">Facebook</Link>
         <br />
         <Link href="https://qiita.com/tmd45">Qiita</Link>
       </Typography>
