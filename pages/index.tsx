@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material"
 import Copyright from "../components/Copyright"
+import ReturnTopFab from "../components/ReturnTopFab"
 
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded"
 import HomeWorkRoundedIcon from "@mui/icons-material/HomeWorkRounded"
@@ -184,6 +185,7 @@ export default function IndexPage() {
         tmd45[at]betaful.life
       </Typography>
 
+      <ReturnTopFab />
       <Copyright />
     </>
   )
