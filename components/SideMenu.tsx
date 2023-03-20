@@ -1,7 +1,8 @@
 import * as React from "react"
+import { UrlObject } from "url"
+import { useRouter } from "next/router"
 import {
   Drawer,
-  alpha,
   useTheme,
   List,
   ListItem,
@@ -13,7 +14,6 @@ import {
 
 import { Link } from "../components/Link"
 import MenuTitle from "./SideMenuTitle"
-import MenuSocialLink from "../components/MenuSocialLink"
 
 import MenuRoundedIcon from "@mui/icons-material/Menu"
 
@@ -30,16 +30,8 @@ const MENU_ITEMS: readonly SideMenuItem[] = [
     url: "/",
   },
   {
-    name: "Blog",
-    url: "https://blog.betaful.life",
-  },
-  {
     name: "Activity",
     url: "/activity",
-  },
-  {
-    name: "Identification",
-    url: "/identification",
   },
 ]
 
@@ -78,6 +70,7 @@ const MenuListItem: React.FC<{
 }
 
 export default function SideMenu() {
+  const router = useRouter()
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
   const handleDrawerToggle = () => {
@@ -86,19 +79,18 @@ export default function SideMenu() {
 
   const selectedItemName =
     [...MENU_ITEMS].find((item) => {
-      return item.url
+      return router.pathname.startsWith(item.url)
     })?.name ?? "Profile"
 
   const drawer = (
     <>
       <List disablePadding>
         <MenuTitle />
-        <MenuSocialLink />
         {MENU_ITEMS.map((item) => (
           <MenuListItem
             key={item.name}
             item={item}
-            selected={selectedItemName === "Activity"}
+            selected={item.url === selectedItemName}
           />
         ))}
       </List>

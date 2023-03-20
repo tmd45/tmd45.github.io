@@ -11,6 +11,7 @@ export default function MenuTitle() {
       sx={{
         display: "flex",
         justifyContent: "center",
+        paddingBottom: "1.5rem",
       }}
     >
       <Box width={"100%"}>
