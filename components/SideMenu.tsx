@@ -30,6 +30,14 @@ const MENU_ITEMS: readonly SideMenuItem[] = [
     url: "/",
   },
   {
+    name: "Articles",
+    url: "/articles",
+  },
+  {
+    name: "Skills",
+    url: "/skills",
+  },
+  {
     name: "Activity",
     url: "/activity",
   },
